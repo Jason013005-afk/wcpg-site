@@ -1,126 +1,86 @@
-:root {
-    --bg:#0b0f14;
-      --panel:#121a26;
-        --text:#eef2f8;
-          --muted:#b7c1d1;
-            --accent:#f2b233;
-              --border:rgba(255,255,255,.12);
-              }
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-              * { box-sizing:border-box; }
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
 
-              html,body {
-                margin:0;
-                  padding:0;
-                    background:var(--bg);
-                      color:var(--text);
-                        font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-                          line-height:1.55;
-                          }
+/* NAV BAR */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #000;
+  border-bottom: 3px solid #ffcc00;
+  padding: 15px 10px;
+}
 
-                          header {
-                            position:sticky;
-                              top:0;
-                                z-index:1000;
-                                  background:rgba(10,14,20,.95);
-                                    backdrop-filter:blur(10px);
-                                      border-bottom:1px solid var(--border);
-                                      }
+.main-nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 14px;
+  text-transform: uppercase;
+}
 
-                                      .nav {
-                                        max-width:1100px;
-                                          margin:0 auto;
-                                            padding:12px 16px;
-                                              display:flex;
-                                                flex-wrap:wrap;
-                                                  gap:8px;
-                                                  }
+.main-nav a:hover {
+  color: #fff;
+}
 
-                                                  .nav a {
-                                                    color:var(--text);
-                                                      text-decoration:none;
-                                                        padding:8px 12px;
-                                                          border-radius:10px;
-                                                            font-weight:700;
-                                                            }
+/* HEADER IMAGE */
+.page-header img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
 
-                                                            .nav a.active {
-                                                              background:rgba(242,178,51,.18);
-                                                                color:var(--accent);
-                                                                }
+/* CONTENT */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
 
-                                                                .nav a:hover {
-                                                                  background:rgba(255,255,255,.08);
-                                                                  }
+.container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 
-                                                                  .hero {
-                                                                    width:100%;
-                                                                      height:clamp(260px,45vh,520px);
-                                                                        object-fit:cover;
-                                                                          display:block;
-                                                                            background:#000;
-                                                                            }
+.container p {
+  font-size: 18px;
+}
 
-                                                                            main {
-                                                                              max-width:1100px;
-                                                                                margin:0 auto;
-                                                                                  padding:28px 16px 44px;
-                                                                                  }
+/* FOOTER */
+footer {
+  background-color: #000;
+  border-top: 3px solid #ffcc00;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
 
-                                                                                  h1 {
-                                                                                    font-size:clamp(28px,4.5vw,42px);
-                                                                                      margin:8px 0 6px;
-                                                                                      }
+footer p {
+  font-size: 16px;
+  color: #ffcc00;
+}
 
-                                                                                      .sub {
-                                                                                        color:var(--muted);
-                                                                                          margin-bottom:20px;
-                                                                                          }
+/* LINKS (GLOBAL FIX — NO PURPLE EVER) */
+a:link,
+a:visited {
+  color: #ffcc00;
+}
 
-                                                                                          .grid {
-                                                                                            display:grid;
-                                                                                              grid-template-columns:repeat(12,1fr);
-                                                                                                gap:16px;
-                                                                                                }
-
-                                                                                                .card {
-                                                                                                  grid-column:span 6;
-                                                                                                    background:var(--panel);
-                                                                                                      border:1px solid var(--border);
-                                                                                                        border-radius:16px;
-                                                                                                          padding:18px;
-                                                                                                          }
-
-                                                                                                          @media(max-width:820px){
-                                                                                                            .card { grid-column:span 12; }
-                                                                                                            }
-
-                                                                                                            footer {
-                                                                                                              border-top:1px solid var(--border);
-                                                                                                                background:rgba(255,255,255,.03);
-                                                                                                                }
-
-                                                                                                                .footer {
-                                                                                                                  max-width:1100px;
-                                                                                                                    margin:0 auto;
-                                                                                                                      padding:18px 16px;
-                                                                                                                        display:flex;
-                                                                                                                          justify-content:space-between;
-                                                                                                                            flex-wrap:wrap;
-                                                                                                                              color:var(--muted);
-                                                                                                                              }
-}.horn-toggle {
-    margin-top: 20px;
-      background: #ffb81c;
-        color: #000;
-          border: none;
-            padding: 10px 16px;
-              border-radius: 8px;
-                font-weight: 700;
-                  cursor: pointer;
-                  }
-
-                  .horn-toggle:hover {
-                    background: #ffd76a;
-                    }
+a:hover {
+  color: #ffffff;
 }
