@@ -3,102 +3,64 @@
 <head>
   <meta charset="UTF-8">
     <title>Used Gear | Whaling City Sporting Goods</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        </head>
+      <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
 
-        <body>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+          <a href="hockey.html">Hockey</a>
+            <a href="fishing.html">Fishing</a>
+              <a href="printing.html">Printing</a>
+                <a href="used-gear.html">Used Gear</a>
+                  <a href="ltc.html">LTC</a>
+                    <a href="community.html">Community</a>
+                    </nav>
 
-        <!-- NAV BAR -->
-        <nav class="main-nav">
-          <a href="index.html">Home</a>
-            <a href="hockey.html">Hockey</a>
-              <a href="fishing.html">Fishing</a>
-                <a href="printing.html">Printing</a>
-                  <a href="used-gear.html">Used Gear</a>
-                    <a href="ltc.html">LTC</a>
-                      <a href="community.html">Community</a>
-                      </nav>
+                    <header class="hero">
+                      <img src="used-gear-hero.jpg" alt="Used sporting gear">
+                        <div class="hero-text">
+                            <h1>Used Gear</h1>
+                                <p>Youth • Hockey • Fishing • Baseball</p>
+                                  </div>
+                                  </header>
 
-                      <!-- HERO -->
-                      <header class="hero">
-                        <img src="used.jpg" alt="Affordable used sports gear at Whaling City Sporting Goods">
-                          <button class="horn-btn" onclick="playHorn()">🔊 Bruins Goal Horn</button>
-                          </header>
+                                  <section class="image-grid">
+                                    <img src="hockey-skate-sharpening.jpg" alt="Used hockey skates">
+                                      <img src="hockey-rink-action-shot.jpg" alt="Hockey action">
+                                        <img src="fishing-rods-display.jpg" alt="Fishing rods display">
+                                        </section>
 
-                          <!-- MAIN CONTENT -->
-                          <main class="container">
+                                        <section class="order-sheet">
+                                          <h2>Sell or Trade Used Gear</h2>
 
-                            <h1>Used Gear Program</h1>
+                                            <form>
+                                                <label>Name</label>
+                                                    <input type="text" required>
 
-                              <p>
-                                  Kids grow fast — and new gear adds up. Our used gear program helps families
-                                      save money while keeping quality equipment in play. Every item is inspected
-                                          before hitting the floor.
-                                            </p>
+                                                        <label>Email / Phone</label>
+                                                            <input type="text" required>
 
-                                              <ul>
-                                                  <li>Used hockey skates, pads, sticks & helmets</li>
-                                                      <li>Youth sports gear</li>
-                                                          <li>Seasonal availability</li>
-                                                              <li>Trade-ins accepted</li>
-                                                                </ul>
+                                                                <label>Sport</label>
+                                                                    <select>
+                                                                          <option>Hockey</option>
+                                                                                <option>Fishing</option>
+                                                                                      <option>Baseball</option>
+                                                                                            <option>Other</option>
+                                                                                                </select>
 
-                                                                  <!-- ORDER / SUBMISSION FORM -->
-                                                                    <section class="order-sheet">
-                                                                        <h2>Used Gear Request</h2>
+                                                                                                    <label>Item Description</label>
+                                                                                                        <textarea rows="4" placeholder="Brand, size, condition"></textarea>
 
-                                                                            <form
-                                                                                  action="mailto:whalingcitysportinggoods@gmail.com"
-                                                                                        method="POST"
-                                                                                              enctype="text/plain"
-                                                                                                  >
+                                                                                                            <label>Sell or Trade?</label>
+                                                                                                                <select>
+                                                                                                                      <option>Sell</option>
+                                                                                                                            <option>Trade</option>
+                                                                                                                                </select>
 
-                                                                                                        <input type="hidden" name="Page" value="Used Gear">
+                                                                                                                                    <button type="submit">Submit</button>
+                                                                                                                                      </form>
+                                                                                                                                      </section>
 
-                                                                                                              <label>Name</label>
-                                                                                                                    <input type="text" name="Name" required>
-
-                                                                                                                          <label>Email</label>
-                                                                                                                                <input type="email" name="Email" required>
-
-                                                                                                                                      <label>Phone</label>
-                                                                                                                                            <input type="tel" name="Phone">
-
-                                                                                                                                                  <label>Request Type</label>
-                                                                                                                                                        <select name="Request Type">
-                                                                                                                                                                <option>Looking to Buy Used Gear</option>
-                                                                                                                                                                        <option>Looking to Sell Used Gear</option>
-                                                                                                                                                                                <option>Trade-In</option>
-                                                                                                                                                                                      </select>
-
-                                                                                                                                                                                            <label>Item Details</label>
-                                                                                                                                                                                                  <textarea name="Item Details" rows="5"></textarea>
-
-                                                                                                                                                                                                        <button type="submit">Submit Request</button>
-                                                                                                                                                                                                            </form>
-                                                                                                                                                                                                              </section>
-
-                                                                                                                                                                                                              </main>
-
-                                                                                                                                                                                                              <!-- FOOTER -->
-                                                                                                                                                                                                              <footer class="footer">
-                                                                                                                                                                                                                <p>101 Pope’s Island • New Bedford, MA</p>
-                                                                                                                                                                                                                  <p>774-644-5456</p>
-                                                                                                                                                                                                                  </footer>
-
-                                                                                                                                                                                                                  <!-- BRUINS HORN -->
-                                                                                                                                                                                                                  <audio id="bruinsHorn">
-                                                                                                                                                                                                                    <source src="bruins.horn.mp3" type="audio/mpeg">
-                                                                                                                                                                                                                    </audio>
-
-                                                                                                                                                                                                                    <script>
-                                                                                                                                                                                                                      function playHorn() {
-                                                                                                                                                                                                                          const horn = document.getElementById("bruinsHorn");
-                                                                                                                                                                                                                              horn.currentTime = 0;
-                                                                                                                                                                                                                                  horn.play();
-                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                    </script>
-
-                                                                                                                                                                                                                                    </body>
-                                                                                                                                                                                                                                    </html>
+                                                                                                                                      </body>
+                                                                                                                                      </html>
