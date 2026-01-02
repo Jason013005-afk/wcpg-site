@@ -1,47 +1,44 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Whaling City Sporting Goods</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+    <title>Whaling City Sporting Goods</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
 
-<header>
-  <nav class="nav">
-      <a class="active" href="index.html">Home</a>
-          <a href="hockey.html">Hockey</a>
-              <a href="fishing.html">Fishing</a>
-                  <a href="used-gear.html">Used Gear</a>
-                      <a href="printing.html">Printing</a>
-                          <a href="ltc.html">LTC</a>
-                              <a href="community.html">Community</a>
-                                </nav>
-                                </header>
-                                
-                                <img class="hero" src="hero.jpg" alt="Whaling City Sporting Goods">
-                                
-                                <main>
-                                  <h1>Whaling City Sporting Goods</h1>
-                                    <p class="sub">Local gear. Real service. Built for New Bedford.</p>
-                                    
-                                      <div class="grid">
-                                          <div class="card"><h2>Hockey</h2><p>Skates, sticks, sharpening.</p></div>
-                                              <div class="card"><h2>Fishing</h2><p>Salt & freshwater gear.</p></div>
-                                                  <div class="card"><h2>Used Gear</h2><p>Buy, sell, trade.</p></div>
-                                                      <div class="card"><h2>Printing</h2><p>Screen printing & embroidery.</p></div>
-                                                          <div class="card"><h2>LTC</h2><p>Safety & licensing.</p></div>
-                                                              <div class="card"><h2>Community</h2><p>Local teams & schools.</p></div>
-                                                                </div>
-                                                                </main>
-                                                                
-                                                                <footer>
-                                                                  <div class="footer">
-                                                                      <div>101 Pope’s Island, New Bedford MA</div>
-                                                                          <div><a href="tel:17746445456">774-644-5456</a></div>
-                                                                            </div>
-                                                                            </footer>
-                                                                            
-                                                                            </body>
-                                                                            </html>              </p>   
+        <audio id="horn" src="bruins-horn.mp3" preload="auto"></audio>
+        <script>
+          window.addEventListener("load", () => {
+              const horn = document.getElementById("horn");
+                  horn.muted = false;
+                      horn.play().catch(()=>{});
+                        });
+                        </script>
+
+                        <nav class="main-nav">
+                          <a href="index.html">Home</a>
+                            <a href="hockey.html">Hockey</a>
+                              <a href="fishing.html">Fishing</a>
+                                <a href="used-gear.html">Used Gear</a>
+                                  <a href="printing.html">Printing</a>
+                                    <a href="ltc.html">LTC</a>
+                                      <a href="community.html">Community</a>
+                                      </nav>
+
+                                      <header class="hero">
+                                        <img src="hero.jpg" alt="Whaling City Sporting Goods">
+                                        </header>
+
+                                        <main class="container">
+                                          <h1>Whaling City Sporting Goods</h1>
+                                            <p>New Bedford’s local headquarters for hockey, fishing, team sports, printing, and safety training.</p>
+                                            </main>
+
+                                            <footer>
+                                              <p>101 Pope’s Island · New Bedford, MA<br>774-644-5456</p>
+                                              </footer>
+
+                                              </body>
+                                              </html>
