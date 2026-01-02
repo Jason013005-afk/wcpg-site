@@ -2,41 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <title>Printing | WCSG</title>
-      <link rel="stylesheet" href="style.css">
-      </head>
-      <body>
+    <title>Printing & Embroidery | Whaling City Sporting Goods</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        </head>
 
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-          <a href="hockey.html">Hockey</a>
-            <a href="fishing.html">Fishing</a>
-              <a href="printing.html">Printing</a>
-                <a href="used-gear.html">Used Gear</a>
-                  <a href="ltc.html">LTC</a>
-                    <a href="community.html">Community</a>
-                    </nav>
+        <body>
 
-                    <header class="page-hero">
-                      <img src="printing.jpg" alt="Printing">
-                      </header>
+        <!-- NAV BAR -->
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+            <a href="hockey.html">Hockey</a>
+              <a href="fishing.html">Fishing</a>
+                <a href="printing.html">Printing</a>
+                  <a href="used-gear.html">Used Gear</a>
+                    <a href="ltc.html">LTC</a>
+                      <a href="community.html">Community</a>
+                      </nav>
 
-                      <main class="container">
-                        <h1>Screen Printing & Embroidery</h1>
+                      <!-- HERO -->
+                      <header class="hero">
+                        <img src="printing.jpg" alt="Screen printing and embroidery at Whaling City Sporting Goods">
+                          <button class="horn-btn" onclick="playHorn()">🔊 Bruins Goal Horn</button>
+                          </header>
 
-                          <section class="order-sheet">
-                              <h2>Printing Quote</h2>
-                                  <form action="mailto:whalingcitysportinggoods@gmail.com" method="POST" enctype="text/plain">
-                                        <input type="hidden" name="Page" value="Printing">
+                          <!-- MAIN CONTENT -->
+                          <main class="container wide">
 
-                                              <label>Project Details</label>
-                                                    <textarea name="Details"></textarea>
+                            <h1>Screen Printing & Embroidery</h1>
 
-                                                          <button type="submit">Request Quote</button>
-                                                              </form>
-                                                                </section>
-                                                                </main>
+                              <p>
+                                  We handle custom screen printing and embroidery in-house for schools,
+                                      sports teams, local businesses, police, fire departments, and community
+                                          organizations. From small runs to full team orders — we do it right.
+                                            </p>
 
-                                                                <footer><p>WCSG</p></footer>
-                                                                </body>
-                                                                </html>
+                                              <ul>
+                                                  <li>T-shirts, hoodies, hats, jackets</li>
+                                                      <li>Team uniforms & spirit wear</li>
+                                                          <li>Police, fire & municipal apparel</li>
+                                                              <li>Local business branding</li>
+                                                                </ul>
+
+                                                                  <!-- ORDER SHEET -->
+                                                                    <section class="order-sheet">
+                                                                        <h2>Request a Printing Quote</h2>
+
+                                                                            <form
+                                                                                  action="mailto:whalingcitysportinggoods@gmail.com"
+                                                                                        method="POST"
+                                                                                              enctype="text/plain"
+                                                                                                  >
+
+                                                                                                        <input type="hidden" name="Page" value="Printing">
+
+                                                                                                              <label>Name</label>
+                                                                                                                    <input type="text" name="Name" required>
+
+                                                                                                                          <label>Email</label>
+                                                                                                                                <input type="email" name="Email" required>
+
+                                                                                                                                      <label>Phone</label>
+                                                                                                                                            <input type="tel" name="Phone">
+
+                                                                                                                                                  <label>Project Type</label>
+                                                                                                                                                        <select name="Project Type">
+                                                                                                                                                                <option>Screen Printing</option>
+                                                                                                                                                                        <option>Embroidery</option>
+                                                                                                                                                                                <option>Both</option>
+                                                                                                                                                                                      </select>
+
+                                                                                                                                                                                            <label>Quantity</label>
+                                                                                                                                                                                                  <input type="number" name="Quantity" min="1">
+
+                                                                                                                                                                                                        <label>Details / Artwork Notes</label>
+                                                                                                                                                                                                              <textarea name="Notes" rows="5"></textarea>
+
+                                                                                                                                                                                                                    <button type="submit">Send Quote Request</button>
+                                                                                                                                                                                                                        </form>
+                                                                                                                                                                                                                          </section>
+
+                                                                                                                                                                                                                          </main>
+
+                                                                                                                                                                                                                          <!-- FOOTER -->
+                                                                                                                                                                                                                          <footer class="footer">
+                                                                                                                                                                                                                            <p>101 Pope’s Island • New Bedford, MA</p>
+                                                                                                                                                                                                                              <p>774-644-5456</p>
+                                                                                                                                                                                                                              </footer>
+
+                                                                                                                                                                                                                              <!-- BRUINS HORN (MOBILE-SAFE) -->
+                                                                                                                                                                                                                              <audio id="bruinsHorn">
+                                                                                                                                                                                                                                <source src="bruins.horn.mp3" type="audio/mpeg">
+                                                                                                                                                                                                                                </audio>
+
+                                                                                                                                                                                                                                <script>
+                                                                                                                                                                                                                                  function playHorn() {
+                                                                                                                                                                                                                                      const horn = document.getElementById("bruinsHorn");
+                                                                                                                                                                                                                                          horn.currentTime = 0;
+                                                                                                                                                                                                                                              horn.play();
+                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                </script>
+
+                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                </html>
