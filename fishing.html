@@ -3,33 +3,46 @@
 <head>
   <meta charset="UTF-8">
     <title>Fishing | WCSG</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
+      <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
 
-        <nav class="main-nav">
-          <a href="index.html">Home</a>
-            <a href="hockey.html">Hockey</a>
-              <a href="fishing.html">Fishing</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+          <a href="hockey.html">Hockey</a>
+            <a href="fishing.html">Fishing</a>
+              <a href="printing.html">Printing</a>
                 <a href="used-gear.html">Used Gear</a>
-                  <a href="printing.html">Printing</a>
-                    <a href="ltc.html">LTC</a>
-                      <a href="community.html">Community</a>
-                      </nav>
+                  <a href="ltc.html">LTC</a>
+                    <a href="community.html">Community</a>
+                    </nav>
 
-                      <header class="page-header">
-                        <img src="fishing.jpg" alt="Fishing Gear">
-                        </header>
+                    <header class="page-hero">
+                      <img src="fishing.jpg" alt="Fishing Gear">
+                      </header>
 
-                        <main class="container">
-                          <h1>Fishing</h1>
-                            <p>Saltwater and freshwater gear for New England anglers.</p>
-                            </main>
+                      <main class="container">
+                        <h1>Fishing Gear</h1>
 
-                            <footer>
-                              <p>101 Pope’s Island • New Bedford, MA<br>774-644-5456</p>
-                              </footer>
+                          <section class="order-sheet">
+                              <h2>Fishing Order</h2>
+                                  <form action="mailto:whalingcitysportinggoods@gmail.com" method="POST" enctype="text/plain">
+                                        <input type="hidden" name="Page" value="Fishing">
 
-                              </body>
-                              </html>
+                                              <label>Name</label>
+                                                    <input type="text" name="Name">
+
+                                                          <label>Item</label>
+                                                                <input type="text" name="Item">
+
+                                                                      <label>Notes</label>
+                                                                            <textarea name="Notes"></textarea>
+
+                                                                                  <button type="submit">Send Fishing Order</button>
+                                                                                      </form>
+                                                                                        </section>
+                                                                                        </main>
+
+                                                                                        <footer><p>WCSG</p></footer>
+                                                                                        </body>
+                                                                                        </html>
