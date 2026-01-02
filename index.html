@@ -1,53 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-    <title>Whaling City Sporting Goods</title>
-      <link rel="stylesheet" href="style.css">
-      </head>
-      <body>
+  <title>Whaling City Sporting Goods</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-          <a href="hockey.html">Hockey</a>
-            <a href="fishing.html">Fishing</a>
-              <a href="printing.html">Printing</a>
-                <a href="used-gear.html">Used Gear</a>
-                  <a href="ltc.html">LTC</a>
-                    <a href="community.html">Community</a>
-                    </nav>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+        <a href="hockey.html">Hockey</a>
+          <a href="fishing.html">Fishing</a>
+            <a href="printing.html">Printing</a>
+              <a href="ltc.html">LTC</a>
+                <a href="community.html">Community</a>
+                </nav>
 
-                    <header class="hero">
-                      <img src="hero.jpg" alt="Whaling City Sporting Goods">
-                      </header>
+                <section class="hero">
+                  <img src="hero.jpg" alt="Whaling City Sporting Goods">
+                    <br>
+                      <button class="audio-btn" onclick="document.getElementById('horn').play()">Play Bruins Horn</button>
+                        <audio id="horn" src="bruins.horn.mp3"></audio>
+                        </section>
 
-                      <main class="container">
-                        <h1>New Bedford’s Local Gear HQ</h1>
-                          <p>Hockey • Fishing • Team Sports • Printing • LTC & Safety</p>
+                        <div class="container">
+                          <h1>New Bedford’s Local Gear HQ</h1>
 
-                            <!-- ORDER FORM -->
-                              <section class="order-sheet">
-                                  <h2>General Order Request</h2>
-                                      <form action="mailto:whalingcitysportinggoods@gmail.com" method="POST" enctype="text/plain">
-                                            <input type="hidden" name="Page" value="Home Page">
+                            <section class="image-grid">
+                                <img src="store-apparel-display.jpg">
+                                    <img src="fishing-rods-display.jpg">
+                                        <img src="printed-apparel.jpg">
+                                          </section>
 
-                                                  <label>Name</label>
-                                                        <input type="text" name="Name" required>
+                                            <div class="cta">
+                                                <h2>Visit Us In-Store or Reach Out</h2>
+                                                    <a href="community.html">Get Involved</a>
+                                                      </div>
+                                                      </div>
 
-                                                              <label>Email</label>
-                                                                    <input type="email" name="Email" required>
+                                                      <footer>
+                                                        © Whaling City Sporting Goods
+                                                        </footer>
 
-                                                                          <label>What are you looking for?</label>
-                                                                                <textarea name="Details" rows="4"></textarea>
-
-                                                                                      <button type="submit">Send Request</button>
-                                                                                          </form>
-                                                                                            </section>
-                                                                                            </main>
-
-                                                                                            <footer>
-                                                                                              <p>101 Pope’s Island • New Bedford, MA • 774-644-5456</p>
-                                                                                              </footer>
-
-                                                                                              </body>
-                                                                                              </html>
+                                                        </body>
+                                                        </html>
