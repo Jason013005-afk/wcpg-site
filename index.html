@@ -1,45 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Whaling City Sporting Goods</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Whaling City Sporting Goods</title>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-        <a href="hockey.html">Hockey</a>
-          <a href="fishing.html">Fishing</a>
-            <a href="printing.html">Printing</a>
-              <a href="ltc.html">LTC</a>
-                <a href="community.html">Community</a>
-                </nav>
+        <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
 
-                <section class="hero">
-                  <img src="hero.jpg" alt="Whaling City Sporting Goods">
-                    <br>
-                      <button class="audio-btn" onclick="document.getElementById('horn').play()">Play Bruins Horn</button>
-                        <audio id="horn" src="bruins.horn.mp3"></audio>
-                        </section>
+          <!-- NAV -->
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                    <a href="hockey.html">Hockey</a>
+                        <a href="fishing.html">Fishing</a>
+                            <a href="used-gear.html">Used Gear</a>
+                                <a href="printing.html">Printing</a>
+                                    <a href="ltc.html">LTC</a>
+                                        <a href="community.html">Community</a>
+                                          </nav>
 
-                        <div class="container">
-                          <h1>New Bedford’s Local Gear HQ</h1>
+                                            <!-- HERO -->
+                                              <header class="hero">
+                                                  <img src="hero.jpg" alt="Whaling City Sporting Goods Hero">
+                                                      <div class="hero-text">
+                                                            <h1>Whaling City Sporting Goods</h1>
+                                                                  <p>New Bedford’s Local Gear HQ</p>
 
-                            <section class="image-grid">
-                                <img src="store-apparel-display.jpg">
-                                    <img src="fishing-rods-display.jpg">
-                                        <img src="printed-apparel.jpg">
-                                          </section>
+                                                                        <button class="horn-btn" onclick="document.getElementById('bruinsHorn').play()">
+                                                                                🔊 Play Bruins Goal Horn
+                                                                                      </button>
+                                                                                          </div>
+                                                                                            </header>
 
-                                            <div class="cta">
-                                                <h2>Visit Us In-Store or Reach Out</h2>
-                                                    <a href="community.html">Get Involved</a>
-                                                      </div>
-                                                      </div>
+                                                                                              <!-- AUDIO -->
+                                                                                                <audio id="bruinsHorn" src="bruins.horn.mp3" preload="auto"></audio>
 
-                                                      <footer>
-                                                        © Whaling City Sporting Goods
-                                                        </footer>
+                                                                                                  <!-- IMAGE GRID -->
+                                                                                                    <section class="content">
+                                                                                                        <h2>Inside the Shop</h2>
 
-                                                        </body>
-                                                        </html>
+                                                                                                            <div class="image-grid">
+                                                                                                                  <img src="store-apparel-display.jpg" alt="Apparel display">
+                                                                                                                        <img src="fishing-rods-display.jpg" alt="Fishing rods">
+                                                                                                                              <img src="printed-apparel.jpg" alt="Printed apparel">
+                                                                                                                                  </div>
+                                                                                                                                    </section>
+
+                                                                                                                                      <!-- CTA -->
+                                                                                                                                        <section class="cta">
+                                                                                                                                            <h2>Visit Us Today</h2>
+                                                                                                                                                <p>101 Pope’s Island • New Bedford, MA</p>
+                                                                                                                                                    <p>📞 774-644-5456</p>
+                                                                                                                                                      </section>
+
+                                                                                                                                                        <!-- FOOTER -->
+                                                                                                                                                          <footer>
+                                                                                                                                                              <p>© Whaling City Sporting Goods</p>
+                                                                                                                                                                </footer>
+
+                                                                                                                                                                </body>
+                                                                                                                                                                </html>
