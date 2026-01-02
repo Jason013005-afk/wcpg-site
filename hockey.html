@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hockey</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+    <title>Hockey | WCSG</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
 
-<header>
-  <nav class="nav">
-      <a href="index.html">Home</a>
-          <a class="active" href="hockey.html">Hockey</a>
+        <audio id="horn" src="bruins-horn.mp3" preload="auto"></audio>
+        <script>
+        window.onload=()=>{document.getElementById("horn").play().catch(()=>{});}
+        </script>
+
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+            <a href="hockey.html">Hockey</a>
               <a href="fishing.html">Fishing</a>
-                  <a href="used-gear.html">Used Gear</a>
-                      <a href="printing.html">Printing</a>
-                          <a href="ltc.html">LTC</a>
-                              <a href="community.html">Community</a>
-                                </nav>
-                                </header>
+                <a href="used-gear.html">Used Gear</a>
+                  <a href="printing.html">Printing</a>
+                    <a href="ltc.html">LTC</a>
+                      <a href="community.html">Community</a>
+                      </nav>
 
-                                <img class="hero" src="hockey.jpg" alt="Hockey gear">
+                      <header class="page-header">
+                        <img src="hockey.jpg" alt="Hockey gear">
+                        </header>
 
-                                <main>
-                                  <h1>Hockey</h1>
-                                    <p class="sub">Pro fitting, sharpening, and team support.</p>
-                                    </main>
+                        <main class="container">
+                          <h1>Hockey</h1>
+                            <p>Pro shop services, skate sharpening, sticks, protective gear, and team outfitting.</p>
+                            </main>
 
-                                    <footer>
-                                      <div class="footer">
-                                          <div>101 Pope’s Island, New Bedford MA</div>
-                                              <div><a href="tel:17746445456">774-644-5456</a></div>
-                                                </div>
-                                                </footer>
+                            <footer>
+                              <p>101 Pope’s Island · New Bedford, MA<br>774-644-5456</p>
+                              </footer>
 
-                                                <audio id="horn" src="bruins-horn.mp3"></audio>
-                                                <script>
-                                                document.addEventListener('click',()=>document.getElementById('horn').play(),{once:true});
-                                                </script>
-
-                                                </body>
-                                                </html>
+                              </body>
+                              </html>
