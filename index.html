@@ -1,86 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hockey Pro Shop | Whaling City Sporting Goods</title>
-<meta name="description" content="Hockey skate fitting, sharpening, sticks, and team gear at Whaling City Sporting Goods in New Bedford, MA.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Whaling City Sporting Goods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BRUINS-STYLE GOAL HORN (HOCKEY PAGE ONLY) -->
-<script>
-let hornPlayed = false;
-let ctx, gain;
+<nav class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="hockey.html">Hockey</a>
+  <a href="fishing.html">Fishing</a>
+  <a href="used-gear.html">Used Gear</a>
+  <a href="printing.html">Printing</a>
+  <a href="ltc.html">LTC</a>
+  <a href="community.html">Community</a>
+</nav>
 
-function playBruinsHorn() {
-  if (hornPlayed) return;
-    hornPlayed = true;
+<header class="page-header">
+  <img src="hero.jpg" alt="Whaling City Sporting Goods">
+</header>
 
-      ctx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc1 = ctx.createOscillator();
-          const osc2 = ctx.createOscillator();
-            gain = ctx.createGain();
+<main class="container">
+  <h1>Whaling City Sporting Goods</h1>
+  <p>New Bedford’s local headquarters for hockey, fishing, team sports, custom printing, and safety classes.</p>
+</main>
 
-              osc1.type = "sawtooth";
-                osc2.type = "square";
+<footer>
+  <p>101 Pope’s Island • New Bedford, MA<br>774-644-5456</p>
+</footer>
 
-                  osc1.frequency.value = 96;
-                    osc2.frequency.value = 123;
-
-                      gain.gain.setValueAtTime(0, ctx.currentTime);
-                        gain.gain.linearRampToValueAtTime(0.9, ctx.currentTime + 0.3);
-                          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 3);
-
-                            osc1.connect(gain);
-                              osc2.connect(gain);
-                                gain.connect(ctx.destination);
-
-                                  osc1.start();
-                                    osc2.start();
-
-                                      osc1.stop(ctx.currentTime + 3);
-                                        osc2.stop(ctx.currentTime + 3);
-                                        }
-
-                                        function muteHorn() {
-                                          if (gain) gain.gain.value = 0;
-                                          }
-
-                                          window.addEventListener("click", playBruinsHorn, { once: true });
-                                          </script>
-
-                                          <nav class="main-nav">
-                                            <a href="index.html">Home</a>
-                                              <a class="active" href="hockey.html">Hockey</a>
-                                                <a href="fishing.html">Fishing</a>
-                                                  <a href="used-gear.html">Used Gear</a>
-                                                    <a href="printing.html">Printing</a>
-                                                      <a href="ltc.html">LTC</a>
-                                                        <a href="community.html">Community</a>
-                                                        </nav>
-
-                                                        <header class="page-header">
-                                                          <img src="hockey.jpg" alt="Hockey pro shop, skate sharpening and fitting">
-                                                          </header>
-
-                                                          <main class="container">
-                                                            <h1>Hockey Pro Shop</h1>
-                                                              <p>
-                                                                  Expert skate fitting, precision sharpening, sticks, protective gear,
-                                                                      and full team support for youth, high school, and adult leagues.
-                                                                        </p>
-
-                                                                          <button class="horn-toggle" onclick="muteHorn()">Mute Goal Horn</button>
-                                                                          </main>
-
-                                                                          <footer>
-                                                                            <p>
-                                                                                101 Pope’s Island · New Bedford, MA<br>
-                                                                                    <a href="tel:17746445456">774-644-5456</a>
-                                                                                      </p>
-                                                                                      </footer>
-
-                                                                                      </body>
-                                                                                      </html>
+</body>
+</html>
