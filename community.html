@@ -1,98 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-    <title>Community | Whaling City Sporting Goods</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        </head>
+  <title>Community | WCSG</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-        <body>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+        <a href="hockey.html">Hockey</a>
+          <a href="fishing.html">Fishing</a>
+            <a href="printing.html">Printing</a>
+              <a href="ltc.html">LTC</a>
+                <a href="community.html">Community</a>
+                </nav>
 
-        <!-- NAV BAR -->
-        <nav class="main-nav">
-          <a href="index.html">Home</a>
-            <a href="hockey.html">Hockey</a>
-              <a href="fishing.html">Fishing</a>
-                <a href="printing.html">Printing</a>
-                  <a href="used-gear.html">Used Gear</a>
-                    <a href="ltc.html">LTC</a>
-                      <a href="community.html">Community</a>
-                      </nav>
+                <div class="container">
+                  <h1>Community & Local Sports</h1>
 
-                      <!-- HERO -->
-                      <header class="hero">
-                        <img src="community.jpg" alt="Supporting local schools, teams, police and firefighters in New Bedford">
-                          <button class="horn-btn" onclick="playHorn()">🔊 Bruins Goal Horn</button>
-                          </header>
+                    <section class="image-grid">
+                        <img src="southcoast-panthers-logo.jpg">
+                            <img src="store-apparel-display.jpg">
+                                <img src="community-hockey-selfie.jpg">
+                                  </section>
 
-                          <!-- MAIN CONTENT -->
-                          <main class="container">
+                                    <div class="cta">
+                                        <h2>Partner With Us</h2>
+                                            <a href="printing.html">Custom Programs</a>
+                                              </div>
+                                              </div>
 
-                            <h1>Proudly Part of the New Bedford Community</h1>
+                                              <footer>© Whaling City Sporting Goods</footer>
 
-                              <p>
-                                  Whaling City Sporting Goods works directly with local schools, youth sports
-                                      programs, police and fire departments, unions, and local businesses.
-                                          From team uniforms to branded apparel and community events — we support
-                                              the people who support New Bedford.
-                                                </p>
-
-                                                  <ul>
-                                                      <li>Local school & youth sports programs</li>
-                                                          <li>Police & fire department apparel</li>
-                                                              <li>Local business uniforms & branding</li>
-                                                                  <li>Community fundraisers & events</li>
-                                                                    </ul>
-
-                                                                      <!-- COMMUNITY REQUEST FORM -->
-                                                                        <section class="order-sheet">
-                                                                            <h2>Community Request</h2>
-
-                                                                                <form
-                                                                                      action="mailto:whalingcitysportinggoods@gmail.com"
-                                                                                            method="POST"
-                                                                                                  enctype="text/plain"
-                                                                                                      >
-
-                                                                                                            <input type="hidden" name="Page" value="Community">
-
-                                                                                                                  <label>Name</label>
-                                                                                                                        <input type="text" name="Name" required>
-
-                                                                                                                              <label>Email</label>
-                                                                                                                                    <input type="email" name="Email" required>
-
-                                                                                                                                          <label>Organization</label>
-                                                                                                                                                <input type="text" name="Organization">
-
-                                                                                                                                                      <label>Request Details</label>
-                                                                                                                                                            <textarea name="Details" rows="5"></textarea>
-
-                                                                                                                                                                  <button type="submit">Send Request</button>
-                                                                                                                                                                      </form>
-                                                                                                                                                                        </section>
-
-                                                                                                                                                                        </main>
-
-                                                                                                                                                                        <!-- FOOTER -->
-                                                                                                                                                                        <footer class="footer">
-                                                                                                                                                                          <p>101 Pope’s Island • New Bedford, MA</p>
-                                                                                                                                                                            <p>774-644-5456</p>
-                                                                                                                                                                            </footer>
-
-                                                                                                                                                                            <!-- BRUINS HORN -->
-                                                                                                                                                                            <audio id="bruinsHorn">
-                                                                                                                                                                              <source src="bruins.horn.mp3" type="audio/mpeg">
-                                                                                                                                                                              </audio>
-
-                                                                                                                                                                              <script>
-                                                                                                                                                                                function playHorn() {
-                                                                                                                                                                                    const horn = document.getElementById("bruinsHorn");
-                                                                                                                                                                                        horn.currentTime = 0;
-                                                                                                                                                                                            horn.play();
-                                                                                                                                                                                              }
-                                                                                                                                                                                              </script>
-
-                                                                                                                                                                                              </body>
-                                                                                                                                                                                              </html>
+                                              </body>
+                                              </html>
