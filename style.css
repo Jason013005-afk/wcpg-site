@@ -1,121 +1,158 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-    margin: 0;
-      padding: 0;
-      }
+/* =========================
+   RESET / BASE
+      ========================= */
 
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-          background: #0b0b0b;
-            color: #f5f5f5;
-              line-height: 1.6;
-              }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        }
 
-              /* NAV */
-              .main-nav {
-                background: #f2c200;
-                  padding: 18px;
-                    display: flex;
-                      justify-content: center;
-                        gap: 28px;
-                          flex-wrap: wrap;
-                          }
+        html {
+          font-size: 16px;
+          }
 
-                          .main-nav a {
-                            color: #000;
-                              text-decoration: none;
-                                font-weight: bold;
-                                  font-size: 18px;
-                                  }
+          body {
+            margin: 0;
+              padding: 0;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                               Roboto, Helvetica, Arial, sans-serif;
+                                 line-height: 1.5;
+                                   color: #111;
+                                     background-color: #ffffff;
+                                     }
 
-                                  .main-nav a:hover {
-                                    text-decoration: underline;
-                                    }
+                                     /* =========================
+                                        LINKS / NAV
+                                           ========================= */
 
-                                    /* HERO */
-                                    .hero {
-                                      text-align: center;
-                                        padding: 40px 20px;
-                                        }
+                                           a {
+                                             color: #111;
+                                               text-decoration: none;
+                                               }
 
-                                        .hero img {
-                                          max-width: 100%;
-                                            border-radius: 16px;
-                                              box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-                                              }
+                                               nav {
+                                                 display: flex;
+                                                   flex-wrap: wrap;
+                                                     justify-content: center;
+                                                       gap: 1rem;
+                                                         padding: 1rem;
+                                                           background: #111;
+                                                           }
 
-                                              /* CONTENT */
-                                              .container {
-                                                max-width: 1200px;
-                                                  margin: auto;
-                                                    padding: 40px 20px;
-                                                    }
+                                                           nav a {
+                                                             color: #fff;
+                                                               font-weight: 600;
+                                                                 text-transform: uppercase;
+                                                                   font-size: 0.9rem;
+                                                                   }
 
-                                                    h1, h2 {
-                                                      margin-bottom: 16px;
-                                                      }
+                                                                   nav a:hover {
+                                                                     text-decoration: underline;
+                                                                     }
 
-                                                      /* IMAGE GRID */
-                                                      .image-grid {
-                                                        display: grid;
-                                                          grid-template-columns: repeat(3, 1fr);
-                                                            gap: 22px;
-                                                              margin: 40px 0;
-                                                              }
+                                                                     /* =========================
+                                                                        HERO SECTION
+                                                                           ========================= */
 
-                                                              .image-grid img {
-                                                                width: 100%;
-                                                                  aspect-ratio: 3 / 4;
-                                                                    object-fit: cover;
-                                                                      border-radius: 16px;
-                                                                        box-shadow: 0 10px 24px rgba(0,0,0,0.5);
-                                                                        }
+                                                                           .hero {
+                                                                             position: relative;
+                                                                               width: 100%;
+                                                                               }
 
-                                                                        /* CTA */
-                                                                        .cta {
-                                                                          background: #111;
-                                                                            border: 2px solid #f2c200;
-                                                                              padding: 30px;
-                                                                                margin: 40px 0;
-                                                                                  text-align: center;
-                                                                                    border-radius: 14px;
-                                                                                    }
+                                                                               .hero img {
+                                                                                 width: 100%;
+                                                                                   height: auto;
+                                                                                     display: block;
+                                                                                     }
 
-                                                                                    .cta a {
-                                                                                      display: inline-block;
-                                                                                        margin-top: 12px;
-                                                                                          padding: 14px 22px;
-                                                                                            background: #f2c200;
-                                                                                              color: #000;
-                                                                                                text-decoration: none;
-                                                                                                  font-weight: bold;
-                                                                                                    border-radius: 8px;
-                                                                                                    }
+                                                                                     .hero h1 {
+                                                                                       position: absolute;
+                                                                                         bottom: 1.5rem;
+                                                                                           left: 50%;
+                                                                                             transform: translateX(-50%);
+                                                                                               margin: 0;
+                                                                                                 padding: 0.5rem 1.25rem;
+                                                                                                   background: rgba(0, 0, 0, 0.6);
+                                                                                                     color: #fff;
+                                                                                                       font-size: 2rem;
+                                                                                                         letter-spacing: 1px;
+                                                                                                           text-align: center;
+                                                                                                             white-space: nowrap;
+                                                                                                             }
 
-                                                                                                    /* AUDIO BUTTON */
-                                                                                                    .audio-btn {
-                                                                                                      margin-top: 20px;
-                                                                                                        padding: 14px 22px;
-                                                                                                          background: #f2c200;
-                                                                                                            border: none;
-                                                                                                              font-weight: bold;
-                                                                                                                cursor: pointer;
-                                                                                                                  border-radius: 8px;
-                                                                                                                  }
+                                                                                                             /* Mobile hero text */
+                                                                                                             @media (max-width: 600px) {
+                                                                                                               .hero h1 {
+                                                                                                                   font-size: 1.5rem;
+                                                                                                                       white-space: normal;
+                                                                                                                           width: 90%;
+                                                                                                                             }
+                                                                                                                             }
 
-                                                                                                                  /* FOOTER */
-                                                                                                                  footer {
-                                                                                                                    text-align: center;
-                                                                                                                      padding: 30px;
-                                                                                                                        background: #000;
-                                                                                                                          margin-top: 60px;
-                                                                                                                            font-size: 14px;
-                                                                                                                            }
+                                                                                                                             /* =========================
+                                                                                                                                SECTIONS
+                                                                                                                                   ========================= */
 
-                                                                                                                            /* MOBILE */
-                                                                                                                            @media (max-width: 768px) {
-                                                                                                                              .image-grid {
-                                                                                                                                  grid-template-columns: 1fr;
-                                                                                                                                    }
-                                                                                                                                    }
+                                                                                                                                   section {
+                                                                                                                                     max-width: 1200px;
+                                                                                                                                       margin: 0 auto;
+                                                                                                                                         padding: 2rem 1rem;
+                                                                                                                                         }
+
+                                                                                                                                         /* =========================
+                                                                                                                                            GALLERY GRID
+                                                                                                                                               ========================= */
+
+                                                                                                                                               .gallery {
+                                                                                                                                                 display: grid;
+                                                                                                                                                   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                                                                                                                                                     gap: 1.25rem;
+                                                                                                                                                     }
+
+                                                                                                                                                     .gallery img {
+                                                                                                                                                       width: 100%;
+                                                                                                                                                         height: auto;
+                                                                                                                                                           display: block;
+                                                                                                                                                             border-radius: 4px;
+                                                                                                                                                               background: #f2f2f2;
+                                                                                                                                                               }
+
+                                                                                                                                                               /* =========================
+                                                                                                                                                                  HEADINGS / TEXT
+                                                                                                                                                                     ========================= */
+
+                                                                                                                                                                     h1, h2, h3 {
+                                                                                                                                                                       font-weight: 700;
+                                                                                                                                                                         margin-top: 0;
+                                                                                                                                                                         }
+
+                                                                                                                                                                         p {
+                                                                                                                                                                           max-width: 800px;
+                                                                                                                                                                             margin-left: auto;
+                                                                                                                                                                               margin-right: auto;
+                                                                                                                                                                               }
+
+                                                                                                                                                                               /* =========================
+                                                                                                                                                                                  FOOTER (OPTIONAL)
+                                                                                                                                                                                     ========================= */
+
+                                                                                                                                                                                     footer {
+                                                                                                                                                                                       text-align: center;
+                                                                                                                                                                                         padding: 2rem 1rem;
+                                                                                                                                                                                           background: #111;
+                                                                                                                                                                                             color: #fff;
+                                                                                                                                                                                               font-size: 0.85rem;
+                                                                                                                                                                                               }
+
+                                                                                                                                                                                               /* =========================
+                                                                                                                                                                                                  UTILITIES
+                                                                                                                                                                                                     ========================= */
+
+                                                                                                                                                                                                     .center {
+                                                                                                                                                                                                       text-align: center;
+                                                                                                                                                                                                       }
+
+                                                                                                                                                                                                       .hidden {
+                                                                                                                                                                                                         display: none;
+                                                                                                                                                                                                         }
