@@ -7,13 +7,13 @@
     <body>
 
     <div class="page">
-      <img id="full">
+      <img id="view" style="width:100%;max-width:1000px;margin:auto;display:block;">
       </div>
 
       <script>
-        const p = new URLSearchParams(window.location.search);
-          document.getElementById("full").src = p.get("img");
-          </script>
+      const p = new URLSearchParams(window.location.search);
+      document.getElementById("view").src = p.get("img");
+      </script>
 
-          </body>
-          </html>
+      </body>
+      </html>

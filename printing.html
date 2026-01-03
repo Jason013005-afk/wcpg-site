@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Printing</title>
-    <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+  <meta charset="UTF-8">
+    <title>Printing & Embroidery | Whaling City Sporting Goods</title>
+      <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
 
-    <nav class="navbar">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-              <li><a href="hockey.html">Hockey</a></li>
-                  <li><a href="fishing.html">Fishing</a></li>
-                      <li><a href="printing.html">Printing</a></li>
-                          <li><a href="used-gear.html">Used Gear</a></li>
-                              <li><a href="ltc.html">LTC</a></li>
-                                  <li><a href="community.html">Community</a></li>
-                                    </ul>
-                                    </nav>
+      <!-- NAV -->
+      <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="hockey.html">Hockey</a></li>
+                    <li><a href="fishing.html">Fishing</a></li>
+                        <li><a href="printing.html">Printing</a></li>
+                            <li><a href="used-gear.html">Used Gear</a></li>
+                                <li><a href="ltc.html">LTC</a></li>
+                                    <li><a href="community.html">Community</a></li>
+                                      </ul>
+                                      </nav>
 
-                                    <div class="page">
+                                      <!-- HERO -->
                                       <div class="hero">
-                                          <img src="image/printing-hero.jpg" alt="Printing">
-                                            </div>
+                                        <img src="image/printing-hero.jpg" alt="Printing & Embroidery">
+                                        </div>
 
-                                              <h1>Printing & Embroidery</h1>
+                                        <!-- PAGE -->
+                                        <div class="page">
 
-                                                <div class="section">
-                                                    <p>Custom apparel for teams, businesses, and organizations.</p>
+                                          <h1>Printing & Embroidery</h1>
+                                            <p style="text-align:center; max-width:900px; margin: 0 auto 30px;">
+                                                Custom apparel for teams, businesses, schools, police & fire departments.
+                                                    Screen printing, embroidery, hats, hoodies, tees, and more.
+                                                      </p>
 
-                                                        <div class="grid">
-                                                              <a href="viewer.html?img=image/printed-apparel.jpg"><img src="image/printed-apparel.jpg" alt="Apparel"></a>
-                                                                    <a href="viewer.html?img=image/printing-equipment.jpg"><img src="image/printing-equipment.jpg" alt="Equipment"></a>
-                                                                          <a href="viewer.html?img=image/store-apparel-display.jpg"><img src="image/store-apparel-display.jpg" alt="Display"></a>
-                                                                              </div>
+                                                        <!-- IMAGE GRID -->
+                                                          <div class="grid">
 
-                                                                                  <div class="order-wrap">
-                                                                                        <div class="order-title">Order Sheet</div>
+                                                              <a href="viewer.html?img=image/printed-apparel.jpg">
+                                                                    <img src="image/printed-apparel.jpg" alt="Printed Apparel">
+                                                                        </a>
 
-                                                                                              <form class="order" onsubmit="return false;">
-                                                                                                      <div class="row">
-                                                                                                                <div><label>Name</label><input type="text" placeholder="Full Name"></div>
-                                                                                                                          <div><label>Phone</label><input type="tel" placeholder="(xxx) xxx-xxxx"></div>
-                                                                                                                                    <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
-                                                                                                                                            </div>
+                                                                            <a href="viewer.html?img=image/printing-equipment.jpg">
+                                                                                  <img src="image/printing-equipment.jpg" alt="Printing Equipment">
+                                                                                      </a>
 
-                                                                                                                                                    <div class="row">
-                                                                                                                                                              <div>
-                                                                                                                                                                          <label>Service</label>
-                                                                                                                                                                                      <select>
-                                                                                                                                                                                                    <option>Screen Printing</option>
-                                                                                                                                                                                                                  <option>Embroidery</option>
-                                                                                                                                                                                                                                <option>Heat Press</option>
-                                                                                                                                                                                                                                              <option>Other</option>
-                                                                                                                                                                                                                                                          </select>
-                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                              <div><label>Qty</label><input type="text" placeholder="How many items?"></div>
-                                                                                                                                                                                                                                                                                        <div><label>Needed By</label><input type="text" placeholder="Date / timeframe"></div>
-                                                                                                                                                                                                                                                                                                </div>
+                                                                                          <a href="viewer.html?img=image/store-apparel-display.jpg">
+                                                                                                <img src="image/store-apparel-display.jpg" alt="Store Apparel Display">
+                                                                                                    </a>
 
-                                                                                                                                                                                                                                                                                                        <div>
-                                                                                                                                                                                                                                                                                                                  <label>Details</label>
-                                                                                                                                                                                                                                                                                                                            <textarea placeholder="Sizes, colors, placement, artwork notes..."></textarea>
-                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                      </div>
 
-                                                                                                                                                                                                                                                                                                                                            <div class="actions">
-                                                                                                                                                                                                                                                                                                                                                      <button class="btn primary" onclick="window.print()">Print / Save</button>
-                                                                                                                                                                                                                                                                                                                                                                <button class="btn ghost" onclick="alert('Fill it out, then tap Print/Save or screenshot it.')">How to Submit</button>
-                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                        <!-- ORDER SHEET -->
+                                                                                                          <div class="order-sheet">
+                                                                                                              <h2>Order Sheet</h2>
 
-                                                                                                                                                                                                                                                                                                                                                                                <div class="small-note">Tip: fill this out and tap “Print/Save” or screenshot it to send to the shop.</div>
-                                                                                                                                                                                                                                                                                                                                                                                      </form>
-                                                                                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                  <input type="text" placeholder="Full Name">
+                                                                                                                      <input type="text" placeholder="Phone Number">
+                                                                                                                          <input type="email" placeholder="Email Address">
 
-                                                                                                                                                                                                                                                                                                                                                                                              <footer>© Whaling City Sporting Goods</footer>
-                                                                                                                                                                                                                                                                                                                                                                                              </div>
+                                                                                                                              <select>
+                                                                                                                                    <option>Category</option>
+                                                                                                                                          <option>Team Apparel</option>
+                                                                                                                                                <option>Business Apparel</option>
+                                                                                                                                                      <option>Police / Fire</option>
+                                                                                                                                                            <option>School / Organization</option>
+                                                                                                                                                                </select>
 
-                                                                                                                                                                                                                                                                                                                                                                                              </body>
-                                                                                                                                                                                                                                                                                                                                                                                              </html>
+                                                                                                                                                                    <input type="text" placeholder="Needed By (date / timeframe)">
+                                                                                                                                                                        <input type="text" placeholder="Estimated Budget">
+
+                                                                                                                                                                            <textarea rows="4" placeholder="Details: sizes, quantities, colors, logos, notes..."></textarea>
+
+                                                                                                                                                                                <button>Print / Save</button>
+
+                                                                                                                                                                                    <p style="font-size:0.85rem; margin-top:10px; color:#aaa;">
+                                                                                                                                                                                          Tip: Fill this out and tap “Print / Save” or screenshot to send to the shop.
+                                                                                                                                                                                              </p>
+                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                <footer>
+                                                                                                                                                                                                  © Whaling City Sporting Goods
+                                                                                                                                                                                                  </footer>
+
+                                                                                                                                                                                                  </body>
+                                                                                                                                                                                                  </html>

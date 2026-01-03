@@ -2,129 +2,115 @@
       box-sizing: border-box;
         margin: 0;
           padding: 0;
-          }
-
-          body {
             font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
               background: #0b0b0b;
-                color: #eee;
+                color: #fff;
                 }
 
-                img {
-                  max-width: 100%;
-                    display: block;
-                    }
+                /* ================= NAV BAR ================= */
 
-                    /* NAV */
-                    .navbar {
-                      position: sticky;
-                        top: 0;
-                          z-index: 1000;
-                            background: #f2b705;
-                              border-bottom: 3px solid #000;
+                .navbar {
+                  background: #f2b705;
+                    padding: 22px 0;
+                      border-bottom: 4px solid #000;
+                      }
+
+                      .navbar ul {
+                        display: flex;
+                          justify-content: center;
+                            gap: 32px;
+                              list-style: none;
                               }
 
-                              .navbar ul {
-                                display: flex;
-                                  justify-content: center;
-                                    list-style: none;
-                                    }
+                              .navbar a {
+                                color: #000;
+                                  font-size: 1.35rem;
+                                    font-weight: 800;
+                                      text-decoration: none;
+                                        padding: 14px 20px;
+                                        }
 
-                                    .navbar li a {
-                                      display: block;
-                                        padding: 14px 18px;
-                                          color: #000;
-                                            font-weight: bold;
-                                              text-decoration: none;
+                                        .navbar a:hover {
+                                          background: #000;
+                                            color: #f2b705;
+                                              border-radius: 6px;
                                               }
 
-                                              .navbar li a:hover {
-                                                background: #000;
-                                                  color: #f2b705;
-                                                  }
+                                              /* ================= HERO ================= */
 
-                                                  /* PAGE */
-                                                  .page {
-                                                    max-width: 1200px;
-                                                      margin: auto;
-                                                        padding: 20px;
-                                                        }
+                                              .hero img {
+                                                width: 100%;
+                                                  max-height: 90vh;
+                                                    object-fit: cover;
+                                                      border-bottom: 4px solid #f2b705;
+                                                      }
 
-                                                        .hero {
-                                                          border: 3px solid #f2b705;
-                                                            margin-bottom: 30px;
+                                                      /* ================= PAGE ================= */
+
+                                                      .page {
+                                                        max-width: 1200px;
+                                                          margin: auto;
+                                                            padding: 40px 20px;
                                                             }
 
                                                             h1, h2 {
                                                               text-align: center;
-                                                                color: #f2b705;
-                                                                  margin: 20px 0;
+                                                                margin-bottom: 20px;
+                                                                  color: #f2b705;
                                                                   }
 
-                                                                  .section {
-                                                                    margin-bottom: 40px;
-                                                                    }
+                                                                  /* ================= GRID ================= */
 
-                                                                    /* GRID */
-                                                                    .grid {
-                                                                      display: grid;
-                                                                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                                                                          gap: 20px;
-                                                                          }
+                                                                  .grid {
+                                                                    display: grid;
+                                                                      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                                                                        gap: 20px;
+                                                                        }
 
-                                                                          .grid img {
-                                                                            border: 2px solid #333;
-                                                                              cursor: pointer;
-                                                                              }
+                                                                        .grid img {
+                                                                          width: 100%;
+                                                                            border-radius: 10px;
+                                                                              border: 3px solid #222;
+                                                                                cursor: pointer;
+                                                                                }
 
-                                                                              /* FOOTER */
-                                                                              footer {
-                                                                                text-align: center;
-                                                                                  padding: 20px;
-                                                                                    color: #777;
-                                                                                      border-top: 1px solid #333;
-                                                                                      }
+                                                                                /* ================= ORDER SHEET ================= */
+
+                                                                                .order-sheet {
+                                                                                  margin-top: 50px;
+                                                                                    padding: 25px;
+                                                                                      background: #111;
+                                                                                        border: 2px solid #f2b705;
+                                                                                          border-radius: 12px;
+                                                                                          }
+
+                                                                                          .order-sheet input,
+                                                                                          .order-sheet textarea,
+                                                                                          .order-sheet select {
+                                                                                            width: 100%;
+                                                                                              padding: 10px;
+                                                                                                margin-bottom: 12px;
+                                                                                                  background: #000;
+                                                                                                    border: 1px solid #444;
+                                                                                                      color: #fff;
+                                                                                                      }
+
+                                                                                                      .order-sheet button {
+                                                                                                        background: #f2b705;
+                                                                                                          color: #000;
+                                                                                                            padding: 12px 20px;
+                                                                                                              border: none;
+                                                                                                                font-weight: 800;
+                                                                                                                  cursor: pointer;
+                                                                                                                  }
+
+                                                                                                                  footer {
+                                                                                                                    text-align: center;
+                                                                                                                      padding: 25px;
+                                                                                                                        border-top: 3px solid #f2b705;
+                                                                                                                          margin-top: 40px;
+                                                                                                                          }
 }
-/* ================================
-   IMAGE FADE-IN + HOVER ANIMATION
-      ================================ */
-
-      /* Grid image base */
-      .grid a {
-        position: relative;
-          overflow: hidden;
-            border-radius: 6px;
-              transition: transform 0.35s ease, box-shadow 0.35s ease;
-              }
-
-              /* Image fade-in */
-              .grid img {
-                width: 100%;
-                  height: 100%;
-                    object-fit: cover;
-                      opacity: 0;
-                        transform: scale(1.04);
-                          animation: imageFadeIn 0.9s ease forwards;
-                          }
-
-                          /* Hover effect */
-                          .grid a:hover {
-                            transform: translateY(-6px);
-                              box-shadow: 0 12px 28px rgba(255, 200, 0, 0.25);
-                              }
-
-                              .grid a:hover img {
-                                transform: scale(1.08);
-                                }
-
-                                /* Fade-in keyframes */
-                                @keyframes imageFadeIn {
-                                  from {
-                                      opacity: 0;
-                                          filter: blur(6px);
-                                            }
-                                              to {
-                                                  opacity: 1;
-                                                      filter: blur(0);
-                                                        }
-                                                        }
