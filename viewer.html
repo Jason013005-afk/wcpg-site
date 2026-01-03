@@ -1,46 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>Image Viewer</title>
     <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
-    <nav class="navbar">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-              <li><a href="hockey.html">Hockey</a></li>
-                  <li><a href="fishing.html">Fishing</a></li>
-                      <li><a href="printing.html">Printing</a></li>
-                          <li><a href="used-gear.html">Used Gear</a></li>
-                              <li><a href="ltc.html">LTC</a></li>
-                                  <li><a href="community.html">Community</a></li>
-                                    </ul>
-                                    </nav>
+    <div class="page">
+      <img id="full">
+      </div>
 
-                                    <div class="viewer-wrap">
-                                      <h1>Photo</h1>
+      <script>
+        const p = new URLSearchParams(window.location.search);
+          document.getElementById("full").src = p.get("img");
+          </script>
 
-                                        <div class="viewer">
-                                            <img id="bigImg" src="image/hero.jpg" alt="Photo">
-                                              </div>
-
-                                                <div class="viewer-bar">
-                                                    <a href="javascript:history.back()">← Back</a>
-                                                        <a id="openRaw" href="image/hero.jpg">Open Original</a>
-                                                          </div>
-
-                                                            <footer>© Whaling City Sporting Goods</footer>
-                                                            </div>
-
-                                                            <script>
-                                                              const params = new URLSearchParams(location.search);
-                                                                const img = params.get("img");
-                                                                  if (img) {
-                                                                      document.getElementById("bigImg").src = img;
-                                                                          document.getElementById("openRaw").href = img;
-                                                                            }
-                                                                            </script>
-
-                                                                            </body>
-                                                                            </html>
+          </body>
+          </html>
