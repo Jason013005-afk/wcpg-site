@@ -20,21 +20,61 @@
 
                                     <div class="page">
                                       <div class="hero">
-                                          <img src="image/fishing-hero.jpg">
+                                          <img src="image/fishing-hero.jpg" alt="Fishing">
                                             </div>
 
                                               <h1>Fishing Gear</h1>
 
                                                 <div class="section">
-                                                    <div class="grid">
-                                                          <img src="image/fishing-rods-display.jpg">
-                                                                <img src="image/tackle-display.jpg">
-                                                                      <img src="image/store-fishing-interior.jpg">
-                                                                          </div>
-                                                                            </div>
+                                                    <p>Fresh bait, tackle, rods, reels, and the full setup.</p>
 
-                                                                              <footer>© Whaling City Sporting Goods</footer>
+                                                        <div class="grid">
+                                                              <a href="viewer.html?img=image/fishing-rods-display.jpg"><img src="image/fishing-rods-display.jpg" alt="Rods"></a>
+                                                                    <a href="viewer.html?img=image/tackle-display.jpg"><img src="image/tackle-display.jpg" alt="Tackle"></a>
+                                                                          <a href="viewer.html?img=image/store-fishing-interior.jpg"><img src="image/store-fishing-interior.jpg" alt="Store"></a>
                                                                               </div>
 
-                                                                              </body>
-                                                                              </html>
+                                                                                  <div class="order-wrap">
+                                                                                        <div class="order-title">Order Sheet</div>
+
+                                                                                              <form class="order" onsubmit="return false;">
+                                                                                                      <div class="row">
+                                                                                                                <div><label>Name</label><input type="text" placeholder="Full Name"></div>
+                                                                                                                          <div><label>Phone</label><input type="tel" placeholder="(xxx) xxx-xxxx"></div>
+                                                                                                                                    <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+                                                                                                                                            </div>
+
+                                                                                                                                                    <div class="row">
+                                                                                                                                                              <div>
+                                                                                                                                                                          <label>Category</label>
+                                                                                                                                                                                      <select>
+                                                                                                                                                                                                    <option>Fishing - Bait</option>
+                                                                                                                                                                                                                  <option>Fishing - Tackle</option>
+                                                                                                                                                                                                                                <option>Fishing - Rod/Reel</option>
+                                                                                                                                                                                                                                              <option>Fishing - Other</option>
+                                                                                                                                                                                                                                                          </select>
+                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                              <div><label>Needed By</label><input type="text" placeholder="Date / timeframe"></div>
+                                                                                                                                                                                                                                                                                        <div><label>Budget</label><input type="text" placeholder="$"></div>
+                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                        <div>
+                                                                                                                                                                                                                                                                                                                  <label>Details</label>
+                                                                                                                                                                                                                                                                                                                            <textarea placeholder="What do you need? Brands, sizes, line, hooks, etc..."></textarea>
+                                                                                                                                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                                                            <div class="actions">
+                                                                                                                                                                                                                                                                                                                                                      <button class="btn primary" onclick="window.print()">Print / Save</button>
+                                                                                                                                                                                                                                                                                                                                                                <button class="btn ghost" onclick="alert('Fill it out, then tap Print/Save or screenshot it.')">How to Submit</button>
+                                                                                                                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                <div class="small-note">Tip: fill this out and tap “Print/Save” or screenshot it to send to the shop.</div>
+                                                                                                                                                                                                                                                                                                                                                                                      </form>
+                                                                                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                              <footer>© Whaling City Sporting Goods</footer>
+                                                                                                                                                                                                                                                                                                                                                                                              </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                              </body>
+                                                                                                                                                                                                                                                                                                                                                                                              </html>
