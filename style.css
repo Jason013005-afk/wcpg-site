@@ -1,194 +1,57 @@
-/* =========================
-   RESET / BASE
-   ========================= */
-   * {
-     box-sizing: border-box;
-       margin: 0;
-         padding: 0;
-         }
+* {
+      box-sizing: border-box;
+        margin: 0;
+          padding: 0;
+          }
 
-         body {
-           font-family: Arial, Helvetica, sans-serif;
-             background: #111;
-               color: #fff;
-                 line-height: 1.6;
-                 }
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+              background: #000;
+                color: #fff;
+                  padding-bottom: 90px;
+                  }
 
-                 img {
-                   max-width: 100%;
-                     height: auto;
-                       display: block;
-                       }
+                  .hero {
+                    width: 100%;
+                      height: auto;
+                        display: block;
+                        }
 
-                       /* =========================
-                          LINKS & BUTTONS
-                          ========================= */
-                          a {
-                            color: #fff;
-                              text-decoration: none;
+                        .page {
+                          padding: 1.2rem;
+                          }
+
+                          h1 {
+                            margin-bottom: 0.75rem;
+                            }
+
+                            p {
+                              line-height: 1.5;
                               }
 
-                              .btn {
-                                display: inline-block;
-                                  padding: 12px 22px;
-                                    background: #e63946;
-                                      color: #fff;
-                                        border-radius: 6px;
-                                          font-weight: bold;
-                                            margin-top: 15px;
-                                            }
+                              /* BOTTOM NAV */
+                              .bottom-nav {
+                                position: fixed;
+                                  bottom: 0;
+                                    left: 0;
+                                      width: 100%;
+                                        height: 80px;
+                                          background: #111;
+                                            border-top: 2px solid #333;
+                                              display: flex;
+                                                justify-content: space-around;
+                                                  align-items: center;
+                                                    z-index: 9999;
+                                                    }
 
-                                            .btn:hover {
-                                              background: #c92d39;
-                                              }
+                                                    .bottom-nav a {
+                                                      color: #fff;
+                                                        text-decoration: none;
+                                                          font-size: 0.9rem;
+                                                            font-weight: bold;
+                                                            }
 
-                                              /* =========================
-                                                 HEADER / NAV
-                                                 ========================= */
-                                                 header {
-                                                   background: #000;
-                                                     padding: 15px 20px;
-                                                       border-bottom: 2px solid #222;
-                                                       }
-
-                                                       nav {
-                                                         display: flex;
-                                                           justify-content: space-between;
-                                                             align-items: center;
-                                                               flex-wrap: wrap;
-                                                               }
-
-                                                               nav a {
-                                                                 margin-right: 15px;
-                                                                   font-weight: bold;
-                                                                   }
-
-                                                                   /* =========================
-                                                                      HERO SECTION
-                                                                      ========================= */
-                                                                      .hero {
-                                                                        position: relative;
-                                                                          width: 100%;
-                                                                            height: 65vh;
-                                                                              overflow: hidden;
-                                                                              }
-
-                                                                              .hero img {
-                                                                                width: 100%;
-                                                                                  height: 100%;
-                                                                                    object-fit: cover;
-                                                                                    }
-
-                                                                                    .hero-text {
-                                                                                      position: absolute;
-                                                                                        inset: 0;
-                                                                                          background: rgba(0,0,0,0.55);
-                                                                                            display: flex;
-                                                                                              flex-direction: column;
-                                                                                                justify-content: center;
-                                                                                                  align-items: center;
-                                                                                                    text-align: center;
-                                                                                                      padding: 20px;
-                                                                                                      }
-
-                                                                                                      .hero-text h1 {
-                                                                                                        font-size: 2.6rem;
-                                                                                                          margin-bottom: 10px;
-                                                                                                          }
-
-                                                                                                          .hero-text p {
-                                                                                                            font-size: 1.1rem;
-                                                                                                              max-width: 700px;
-                                                                                                              }
-
-                                                                                                              /* =========================
-                                                                                                                 SECTION WRAPPER
-                                                                                                                 ========================= */
-                                                                                                                 .section {
-                                                                                                                   padding: 50px 20px;
-                                                                                                                     max-width: 1200px;
-                                                                                                                       margin: auto;
-                                                                                                                       }
-
-                                                                                                                       .section h2 {
-                                                                                                                         text-align: center;
-                                                                                                                           margin-bottom: 30px;
-                                                                                                                             font-size: 2rem;
-                                                                                                                             }
-
-                                                                                                                             /* =========================
-                                                                                                                                IMAGE GRID (3 PER ROW)
-                                                                                                                                ========================= */
-                                                                                                                                .grid {
-                                                                                                                                  display: grid;
-                                                                                                                                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                                                                                                                                      gap: 25px;
-                                                                                                                                      }
-
-                                                                                                                                      .card {
-                                                                                                                                        background: #1a1a1a;
-                                                                                                                                          border-radius: 10px;
-                                                                                                                                            overflow: hidden;
-                                                                                                                                            }
-
-                                                                                                                                            .card img {
-                                                                                                                                              width: 100%;
-                                                                                                                                                height: 260px;
-                                                                                                                                                  object-fit: cover;
-                                                                                                                                                  }
-
-                                                                                                                                                  .card .content {
-                                                                                                                                                    padding: 15px;
-                                                                                                                                                    }
-
-                                                                                                                                                    .card h3 {
-                                                                                                                                                      margin-bottom: 8px;
-                                                                                                                                                      }
-
-                                                                                                                                                      /* =========================
-                                                                                                                                                         COMMUNITY COLLAGE
-                                                                                                                                                         ========================= */
-                                                                                                                                                         .collage {
-                                                                                                                                                           max-width: 900px;
-                                                                                                                                                             margin: auto;
-                                                                                                                                                               border-radius: 12px;
-                                                                                                                                                                 overflow: hidden;
-                                                                                                                                                                 }
-
-                                                                                                                                                                 .collage img {
-                                                                                                                                                                   width: 100%;
-                                                                                                                                                                     height: auto;
-                                                                                                                                                                     }
-
-                                                                                                                                                                     /* =========================
-                                                                                                                                                                        AUDIO (HORN)
-                                                                                                                                                                        ========================= */
-                                                                                                                                                                        audio {
-                                                                                                                                                                          margin-top: 20px;
-                                                                                                                                                                            width: 100%;
-                                                                                                                                                                            }
-
-                                                                                                                                                                            /* =========================
-                                                                                                                                                                               FOOTER
-                                                                                                                                                                               ========================= */
-                                                                                                                                                                               footer {
-                                                                                                                                                                                 background: #000;
-                                                                                                                                                                                   text-align: center;
-                                                                                                                                                                                     padding: 25px;
-                                                                                                                                                                                       margin-top: 50px;
-                                                                                                                                                                                         font-size: 0.9rem;
-                                                                                                                                                                                           color: #aaa;
-                                                                                                                                                                                           }
-
-                                                                                                                                                                                           /* =========================
-                                                                                                                                                                                              MOBILE FIXES
-                                                                                                                                                                                              ========================= */
-                                                                                                                                                                                              @media (max-width: 768px) {
-                                                                                                                                                                                                .hero {
-                                                                                                                                                                                                    height: 50vh;
-                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                        .hero-text h1 {
-                                                                                                                                                                                                            font-size: 2rem;
-                                                                                                                                                                                                              }
-                                                                                                                                                                                                              }
+                                                            .bottom-nav a:hover {
+                                                              color: #f5c400;
+                                                              }fixgffffff
+}
