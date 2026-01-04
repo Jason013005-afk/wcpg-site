@@ -1,0 +1,87 @@
+:root {
+      --nav-height: 64px;
+        --yellow: #f2b705;
+          --bg: #000;
+            --text: #eee;
+            }
+
+            * {
+              box-sizing: border-box;
+              }
+
+              body {
+                margin: 0;
+                  background: var(--bg);
+                    color: var(--text);
+                      font-family: Arial, Helvetica, sans-serif;
+                        padding-top: var(--nav-height);
+                        }
+
+                        /* NAV */
+                        nav {
+                          position: fixed;
+                            top: 0;
+                              left: 0;
+                                right: 0;
+                                  height: var(--nav-height);
+                                    background: var(--yellow);
+                                      display: flex;
+                                        justify-content: center;
+                                          gap: 20px;
+                                            align-items: center;
+                                              z-index: 1000;
+                                              }
+
+                                              nav a {
+                                                color: #000;
+                                                  text-decoration: none;
+                                                    font-weight: bold;
+                                                    }
+
+                                                    /* HERO */
+                                                    .hero {
+                                                      height: 70vh;
+                                                        min-height: 420px;
+                                                          background-size: cover;
+                                                            background-position: center;
+                                                              filter: brightness(1.15);
+                                                              }
+
+                                                              .hero.portrait {
+                                                                height: 85vh;
+                                                                  background-position: center top;
+                                                                  }
+
+                                                                  /* SECTION */
+                                                                  section {
+                                                                    padding: 32px 16px;
+                                                                      max-width: 1200px;
+                                                                        margin: auto;
+                                                                        }
+
+                                                                        h1 {
+                                                                          color: var(--yellow);
+                                                                            margin-bottom: 16px;
+                                                                            }
+
+                                                                            /* IMAGE GRID */
+                                                                            .grid {
+                                                                              display: grid;
+                                                                                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                                                                                  gap: 16px;
+                                                                                  }
+
+                                                                                  .grid img {
+                                                                                    width: 100%;
+                                                                                      height: auto;
+                                                                                        border-radius: 6px;
+                                                                                        }
+
+                                                                                        /* FOOTER */
+                                                                                        footer {
+                                                                                          text-align: center;
+                                                                                            padding: 20px;
+                                                                                              opacity: 0.6;
+                                                                                                font-size: 14px;
+                                                                                                }
+}
