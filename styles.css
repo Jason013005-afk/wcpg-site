@@ -1,224 +1,227 @@
 /* =========================
-   ROOT VARIABLES
+   GLOBAL RESET / BASE
    ========================= */
-   :root {
-     --nav-height: 96px;
-       --gold: #f2c200;
-         --black: #000;
-           --dark: #111;
-             --text: #eaeaea;
-               --muted: #aaa;
+   * { box-sizing: border-box; }
+   html, body { margin: 0; padding: 0; }
+   img { max-width: 100%; display: block; }
+
+   :root{
+     --bg: #0b0b0b;
+       --text: #f2f2f2;
+         --muted: rgba(242,242,242,.75);
+           --gold: #f2b705;
+             --card: rgba(255,255,255,.04);
+               --border: rgba(255,255,255,.12);
                }
 
-               /* =========================
-                  RESET
-                  ========================= */
-                  * {
-                    box-sizing: border-box;
-                      margin: 0;
-                        padding: 0;
-                        }
+               body{
+                 font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+                   background: var(--bg);
+                     color: var(--text);
+                       line-height: 1.45;
+                       }
 
-                        html, body {
-                          background: var(--black);
-                            color: var(--text);
-                              font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-                                line-height: 1.5;
-                                }
+                       /* =========================
+                          NAV (DOES NOT COVER HERO)
+                          ========================= */
+                          nav{
+                            background: var(--gold);
+                              border-bottom: 3px solid rgba(0,0,0,.35);
+                                position: sticky; /* stays visible when you scroll, but DOESN’T overlap hero */
+                                  top: 0;
+                                    z-index: 50;
+                                    }
 
-                                /* =========================
-                                   NAVIGATION (FIXED)
-                                   ========================= */
-                                   nav {
-                                     position: fixed;
-                                       top: 0;
-                                         left: 0;
-                                           width: 100%;
-                                             height: var(--nav-height);
-                                               background: var(--gold);
-                                                 z-index: 1000;
-                                                   display: flex;
-                                                     align-items: center;
-                                                     }
+                                    nav ul{
+                                      list-style: none;
+                                        margin: 0;
+                                          padding: 10px 12px;
+                                            display: flex;
+                                              gap: 10px;
+                                                flex-wrap: wrap;
+                                                  justify-content: center;
+                                                    align-items: center;
+                                                    }
 
-                                                     nav ul {
-                                                       width: 100%;
-                                                         list-style: none;
-                                                           display: flex;
-                                                             flex-wrap: wrap;
-                                                               justify-content: center;
-                                                                 gap: 18px;
-                                                                 }
+                                                    nav a{
+                                                      display: inline-block;
+                                                        padding: 10px 12px;
+                                                          text-decoration: none;
+                                                            font-weight: 800;
+                                                              color: #111;
+                                                                border-radius: 10px;
+                                                                }
 
-                                                                 nav a {
-                                                                   text-decoration: none;
-                                                                     color: #000;
-                                                                       font-weight: 700;
-                                                                         font-size: 15px;
-                                                                         }
+                                                                nav a:hover{
+                                                                  background: rgba(0,0,0,.08);
+                                                                  }
 
-                                                                         /* REQUIRED SPACER */
-                                                                         .nav-spacer {
-                                                                           height: var(--nav-height);
-                                                                             width: 100%;
+                                                                  nav a.active{
+                                                                    background: rgba(0,0,0,.16);
+                                                                    }
+
+                                                                    /* =========================
+                                                                       LAYOUT
+                                                                       ========================= */
+                                                                       .page{
+                                                                         width: min(1100px, 92vw);
+                                                                           margin: 0 auto;
+                                                                             padding: 18px 0 40px;
                                                                              }
 
-                                                                             /* =========================
-                                                                                HERO (GLOBAL)
-                                                                                ========================= */
-                                                                                .hero {
-                                                                                  position: relative;
-                                                                                    width: 100%;
-                                                                                      overflow: hidden;
-                                                                                      }
+                                                                             .section{
+                                                                               padding: 22px 0;
+                                                                               }
 
-                                                                                      .hero img {
-                                                                                        width: 100%;
-                                                                                          height: auto;
-                                                                                            display: block;
-                                                                                            }
+                                                                               .h1{
+                                                                                 font-size: clamp(26px, 5vw, 42px);
+                                                                                   margin: 0 0 10px;
+                                                                                     color: var(--gold);
+                                                                                       font-weight: 900;
+                                                                                       }
 
-                                                                                            .hero::after {
-                                                                                              content: "";
-                                                                                                position: absolute;
-                                                                                                  inset: 0;
-                                                                                                    background: linear-gradient(
-                                                                                                        to bottom,
-                                                                                                            rgba(0,0,0,0.35),
-                                                                                                                rgba(0,0,0,0.75)
-                                                                                                                  );
-                                                                                                                  }
+                                                                                       .h2{
+                                                                                         font-size: clamp(22px, 4.3vw, 34px);
+                                                                                           margin: 0 0 10px;
+                                                                                             color: var(--gold);
+                                                                                               font-weight: 900;
+                                                                                               }
 
-                                                                                                                  .hero-text {
-                                                                                                                    position: absolute;
-                                                                                                                      left: 16px;
-                                                                                                                        bottom: 16px;
-                                                                                                                          z-index: 2;
-                                                                                                                          }
+                                                                                               .p{
+                                                                                                 margin: 0 0 14px;
+                                                                                                   color: var(--muted);
+                                                                                                     font-size: 18px;
+                                                                                                     }
 
-                                                                                                                          .hero-text h1 {
-                                                                                                                            color: var(--gold);
-                                                                                                                              font-size: 28px;
-                                                                                                                                margin-bottom: 4px;
-                                                                                                                                }
+                                                                                                     .hr{
+                                                                                                       height: 1px;
+                                                                                                         background: rgba(255,255,255,.12);
+                                                                                                           border: 0;
+                                                                                                             margin: 26px 0;
+                                                                                                             }
 
-                                                                                                                                .hero-text p {
-                                                                                                                                  color: var(--text);
-                                                                                                                                    font-size: 16px;
-                                                                                                                                    }
+                                                                                                             /* =========================
+                                                                                                                HERO
+                                                                                                                ========================= */
+                                                                                                                .hero{
+                                                                                                                  width: 100%;
+                                                                                                                    border-bottom: 3px solid rgba(242,183,5,.9);
+                                                                                                                      background: #000;
+                                                                                                                      }
 
-                                                                                                                                    /* =========================
-                                                                                                                                       LTC HERO (PORTRAIT LOCK)
-                                                                                                                                       ========================= */
-                                                                                                                                       .hero.ltc img {
-                                                                                                                                         aspect-ratio: 3 / 4;
-                                                                                                                                           object-fit: cover;
-                                                                                                                                           }
+                                                                                                                      .hero-inner{
+                                                                                                                        width: min(1100px, 92vw);
+                                                                                                                          margin: 0 auto;
+                                                                                                                            position: relative;
+                                                                                                                              padding: 16px 0;
+                                                                                                                              }
 
-                                                                                                                                           /* =========================
-                                                                                                                                              PAGE CONTENT
-                                                                                                                                              ========================= */
-                                                                                                                                              section {
-                                                                                                                                                padding: 32px 16px;
-                                                                                                                                                  max-width: 1100px;
-                                                                                                                                                    margin: auto;
+                                                                                                                              .hero-media{
+                                                                                                                                border-radius: 16px;
+                                                                                                                                  overflow: hidden;
+                                                                                                                                    border: 1px solid rgba(255,255,255,.10);
+                                                                                                                                      background: #000;
+                                                                                                                                      }
+
+                                                                                                                                      .hero-media img{
+                                                                                                                                        width: 100%;
+                                                                                                                                          height: min(56vh, 520px);
+                                                                                                                                            object-fit: cover;
+                                                                                                                                              object-position: center;
+                                                                                                                                                filter: brightness(1.05) contrast(1.05);
+                                                                                                                                                }
+
+                                                                                                                                                /* portrait hero option (for LTC) */
+                                                                                                                                                .hero-media img.portrait{
+                                                                                                                                                  height: min(70vh, 680px);
+                                                                                                                                                    object-position: center top;
                                                                                                                                                     }
 
-                                                                                                                                                    section h2 {
-                                                                                                                                                      color: var(--gold);
-                                                                                                                                                        font-size: 26px;
-                                                                                                                                                          margin-bottom: 8px;
-                                                                                                                                                          }
-
-                                                                                                                                                          section p {
-                                                                                                                                                            color: var(--text);
-                                                                                                                                                              max-width: 720px;
+                                                                                                                                                    /* hero overlay text */
+                                                                                                                                                    .hero-text{
+                                                                                                                                                      position: absolute;
+                                                                                                                                                        left: 18px;
+                                                                                                                                                          bottom: 22px;
+                                                                                                                                                            max-width: 85%;
+                                                                                                                                                              text-shadow: 0 2px 16px rgba(0,0,0,.85);
                                                                                                                                                               }
 
-                                                                                                                                                              /* =========================
-                                                                                                                                                                 IMAGE GRIDS
-                                                                                                                                                                 ========================= */
-                                                                                                                                                                 .grid {
-                                                                                                                                                                   display: grid;
-                                                                                                                                                                     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                                                                                                                                                                       gap: 16px;
-                                                                                                                                                                         margin-top: 24px;
-                                                                                                                                                                         }
+                                                                                                                                                              .hero-title{
+                                                                                                                                                                margin: 0;
+                                                                                                                                                                  font-size: clamp(22px, 4.8vw, 44px);
+                                                                                                                                                                    font-weight: 900;
+                                                                                                                                                                      color: var(--gold);
+                                                                                                                                                                      }
 
-                                                                                                                                                                         .grid img {
-                                                                                                                                                                           width: 100%;
-                                                                                                                                                                             border-radius: 6px;
-                                                                                                                                                                             }
+                                                                                                                                                                      .hero-sub{
+                                                                                                                                                                        margin: 4px 0 0;
+                                                                                                                                                                          font-size: clamp(14px, 3.2vw, 20px);
+                                                                                                                                                                            color: rgba(255,255,255,.86);
+                                                                                                                                                                            }
 
-                                                                                                                                                                             /* =========================
-                                                                                                                                                                                USED GEAR (EXACTLY 2 IMAGES)
-                                                                                                                                                                                ========================= */
-                                                                                                                                                                                .used-gear-grid {
-                                                                                                                                                                                  display: grid;
-                                                                                                                                                                                    grid-template-columns: repeat(2, 1fr);
-                                                                                                                                                                                      gap: 16px;
-                                                                                                                                                                                      }
+                                                                                                                                                                            /* =========================
+                                                                                                                                                                               CARDS / GALLERY
+                                                                                                                                                                               ========================= */
+                                                                                                                                                                               .card{
+                                                                                                                                                                                 background: var(--card);
+                                                                                                                                                                                   border: 1px solid var(--border);
+                                                                                                                                                                                     border-radius: 16px;
+                                                                                                                                                                                       padding: 18px;
+                                                                                                                                                                                       }
 
-                                                                                                                                                                                      .used-gear-grid img:nth-child(n+3) {
-                                                                                                                                                                                        display: none;
-                                                                                                                                                                                        }
+                                                                                                                                                                                       .grid{
+                                                                                                                                                                                         display: grid;
+                                                                                                                                                                                           grid-template-columns: repeat(12, 1fr);
+                                                                                                                                                                                             gap: 14px;
+                                                                                                                                                                                             }
 
-                                                                                                                                                                                        /* =========================
-                                                                                                                                                                                           VIEWER PAGE
-                                                                                                                                                                                           ========================= */
-                                                                                                                                                                                           .viewer {
-                                                                                                                                                                                             display: flex;
-                                                                                                                                                                                               justify-content: center;
-                                                                                                                                                                                                 align-items: center;
-                                                                                                                                                                                                   padding: 24px;
-                                                                                                                                                                                                   }
+                                                                                                                                                                                             .col-6{ grid-column: span 6; }
+                                                                                                                                                                                             .col-12{ grid-column: span 12; }
 
-                                                                                                                                                                                                   .viewer img {
-                                                                                                                                                                                                     width: 100%;
-                                                                                                                                                                                                       max-width: 900px;
-                                                                                                                                                                                                         height: auto;
-                                                                                                                                                                                                           max-height: calc(100vh - var(--nav-height) - 48px);
-                                                                                                                                                                                                             object-fit: contain;
-                                                                                                                                                                                                             }
+                                                                                                                                                                                             @media (max-width: 800px){
+                                                                                                                                                                                               .col-6{ grid-column: span 12; }
+                                                                                                                                                                                               }
 
-                                                                                                                                                                                                             /* =========================
-                                                                                                                                                                                                                SQUARE PAY LINK
-                                                                                                                                                                                                                ========================= */
-                                                                                                                                                                                                                .square-pay {
-                                                                                                                                                                                                                  display: inline-block;
-                                                                                                                                                                                                                    margin-top: 24px;
-                                                                                                                                                                                                                      padding: 12px 18px;
-                                                                                                                                                                                                                        border: 2px solid var(--gold);
-                                                                                                                                                                                                                          color: var(--gold);
-                                                                                                                                                                                                                            text-decoration: none;
-                                                                                                                                                                                                                              border-radius: 6px;
-                                                                                                                                                                                                                                font-weight: 700;
-                                                                                                                                                                                                                                }
+                                                                                                                                                                                               /* images inside cards */
+                                                                                                                                                                                               .card img{
+                                                                                                                                                                                                 width: 100%;
+                                                                                                                                                                                                   height: auto;
+                                                                                                                                                                                                     border-radius: 14px;
+                                                                                                                                                                                                       border: 1px solid rgba(255,255,255,.10);
+                                                                                                                                                                                                       }
 
-                                                                                                                                                                                                                                .square-pay:hover {
-                                                                                                                                                                                                                                  background: var(--gold);
-                                                                                                                                                                                                                                    color: #000;
-                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                       /* =========================
+                                                                                                                                                                                                          LINKS
+                                                                                                                                                                                                          ========================= */
+                                                                                                                                                                                                          a{
+                                                                                                                                                                                                            color: #b9a7ff;
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                            a:hover{
+                                                                                                                                                                                                              opacity: .9;
+                                                                                                                                                                                                              }
 
-                                                                                                                                                                                                                                    /* =========================
-                                                                                                                                                                                                                                       FOOTER
-                                                                                                                                                                                                                                       ========================= */
-                                                                                                                                                                                                                                       footer {
-                                                                                                                                                                                                                                         padding: 24px;
-                                                                                                                                                                                                                                           text-align: center;
-                                                                                                                                                                                                                                             color: var(--muted);
-                                                                                                                                                                                                                                               font-size: 14px;
-                                                                                                                                                                                                                                               }
+                                                                                                                                                                                                              /* =========================
+                                                                                                                                                                                                                 FOOTER
+                                                                                                                                                                                                                 ========================= */
+                                                                                                                                                                                                                 footer{
+                                                                                                                                                                                                                   opacity: .75;
+                                                                                                                                                                                                                     text-align: center;
+                                                                                                                                                                                                                       padding: 22px 0 30px;
+                                                                                                                                                                                                                         font-size: 14px;
+                                                                                                                                                                                                                         }
 
-                                                                                                                                                                                                                                               /* =========================
-                                                                                                                                                                                                                                                  MOBILE TWEAKS
-                                                                                                                                                                                                                                                  ========================= */
-                                                                                                                                                                                                                                                  @media (max-width: 600px) {
-                                                                                                                                                                                                                                                    nav a {
-                                                                                                                                                                                                                                                        font-size: 14px;
-                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                         /* =========================
+                                                                                                                                                                                                                            VIEWER PAGE (viewer.html)
+                                                                                                                                                                                                                            ========================= */
+                                                                                                                                                                                                                            .viewer-wrap{
+                                                                                                                                                                                                                              width: min(1100px, 92vw);
+                                                                                                                                                                                                                                margin: 0 auto;
+                                                                                                                                                                                                                                  padding: 18px 0 40px;
+                                                                                                                                                                                                                                  }
 
-                                                                                                                                                                                                                                                            .hero-text h1 {
-                                                                                                                                                                                                                                                                font-size: 22px;
-                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                  .viewer-img{
+                                                                                                                                                                                                                                    width: 100%;
+                                                                                                                                                                                                                                      height: auto;
+                                                                                                                                                                                                                                        border-radius: 16px;
+                                                                                                                                                                                                                                          border: 1px solid rgba(255,255,255,.12);
+                                                                                                                                                                                                                                          }
