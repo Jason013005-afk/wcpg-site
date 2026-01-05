@@ -1,72 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Viewer</title>
+  <meta charset="UTF-8">
+    <title>Image Viewer</title>
+      <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
 
-  <!-- MAIN SITE STYLES -->
-  <link rel="stylesheet" href="style.css" />
+      <nav>…same nav…</nav>
+      <div class="nav-spacer"></div>
 
-  <style>
-    :root {
-      --nav-height: 96px;
-    }
+      <div class="viewer">
+        <img id="view" alt="Full view">
+        </div>
 
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+        <script>
+          const p = new URLSearchParams(window.location.search);
+            document.getElementById("view").src = p.get("img");
+            </script>
 
-    /* Viewer container */
-    .viewer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 16px;
-    }
-
-    .viewer img {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-      max-height: calc(100vh - var(--nav-height) - 32px);
-      object-fit: contain;
-      border-radius: 8px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAV (same as other pages) -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="hockey.html">Hockey</a>
-    <a href="fishing.html">Fishing</a>
-    <a href="printing.html">Printing</a>
-    <a href="used-gear.html">Used Gear</a>
-    <a href="ltc.html">LTC</a>
-    <a href="community.html">Community</a>
-  </nav>
-
-  <!-- REQUIRED SPACER -->
-  <div class="nav-spacer"></div>
-
-  <!-- VIEWER -->
-  <div class="viewer">
-    <img id="view" alt="Image preview" />
-  </div>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const imgSrc = params.get("img");
-    if (imgSrc) {
-      document.getElementById("view").src = imgSrc;
-    }
-  </script>
-
-</body>
-</html>
+            <footer>© Whaling City Sporting Goods</footer>
+            </body>
+            </html>
