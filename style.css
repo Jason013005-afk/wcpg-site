@@ -70,4 +70,31 @@
                                                                         font-size: 14px;
                                                                           color: #ccc;
                                                                           }
+                                                                          .actions {
+                                                                              margin-top: 20px;
+                                                                                display: flex;
+                                                                                  flex-direction: column;
+                                                                                    gap: 12px;
+                                                                                      max-width: 280px;
+                                                                                      }
+
+                                                                                      .btn {
+                                                                                        display: block;
+                                                                                          text-align: center;
+                                                                                            padding: 12px 16px;
+                                                                                              font-weight: bold;
+                                                                                                text-decoration: none;
+                                                                                                  border-radius: 6px;
+                                                                                                  }
+
+                                                                                                  .square-btn {
+                                                                                                    background: #e0e0e0;
+                                                                                                      color: #333;
+                                                                                                      }
+
+                                                                                                      .order-btn {
+                                                                                                        background: #f2b705; /* matches your nav yellow */
+                                                                                                          color: #000;
+                                                                                                          }
+                                                                          }
 }
