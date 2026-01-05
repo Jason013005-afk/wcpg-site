@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <title>Image Viewer</title>
-      <link rel="stylesheet" href="style.css">
-      </head>
-      <body>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Image Viewer</title>
+        <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
 
-      <nav>…same nav…</nav>
-      <div class="nav-spacer"></div>
+          <nav>
+              <ul>
+                    <li><a href="index.html">Home</a></li>
+                          <li><a href="hockey.html">Hockey</a></li>
+                                <li><a href="fishing.html">Fishing</a></li>
+                                      <li><a href="printing.html">Printing</a></li>
+                                            <li><a href="used-gear.html">Used Gear</a></li>
+                                                  <li><a href="ltc.html">LTC</a></li>
+                                                        <li><a href="community.html">Community</a></li>
+                                                            </ul>
+                                                              </nav>
 
-      <div class="viewer">
-        <img id="view" alt="Full view">
-        </div>
+                                                                <main class="viewer-wrap">
+                                                                    <div class="card">
+                                                                          <img id="view" class="viewer-img" alt="Full image view" />
+                                                                              </div>
+                                                                                </main>
 
-        <script>
-          const p = new URLSearchParams(window.location.search);
-            document.getElementById("view").src = p.get("img");
-            </script>
+                                                                                  <footer>© Whaling City Sporting Goods</footer>
 
-            <footer>© Whaling City Sporting Goods</footer>
-            </body>
-            </html>
+                                                                                    <script>
+                                                                                        const params = new URLSearchParams(window.location.search);
+                                                                                            const img = params.get("img") || "image/hero.jpg";
+                                                                                                document.getElementById("view").src = img;
+                                                                                                  </script>
+
+                                                                                                  </body>
+                                                                                                  </html>
