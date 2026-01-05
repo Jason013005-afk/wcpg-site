@@ -97,3 +97,28 @@
                                                                                                 font-size: 14px;
                                                                                                 }
 }
+/* ===============================
+   GLOBAL HERO OFFSET FIX
+      =============================== */
+
+      /* height of sticky nav */
+      :root {
+        --nav-height: 88px;
+        }
+
+        /* ensure nav stays sticky */
+        nav {
+          position: sticky;
+            top: 0;
+              z-index: 1000;
+              }
+
+              /* push all heroes below nav */
+              .hero {
+                margin-top: var(--nav-height);
+                }
+
+                /* safety: prevent negative overlap */
+                .hero:first-of-type {
+                  margin-top: var(--nav-height);
+                  }
