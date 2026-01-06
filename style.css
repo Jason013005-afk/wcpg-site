@@ -188,3 +188,11 @@
                                                                                                                                                                                                    font-size: 0.9rem;
                                                                                                                                                                                                      color: #aaa;
                                                                                                                                                                                                      }
+                                                                                                                                                                                                     nav ul {
+                                                                                                                                                                                                          row-gap: 8px;
+                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                          nav {
+                                                                                                                                                                                                            min-height: 56px;
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                     }
