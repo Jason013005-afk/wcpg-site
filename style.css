@@ -1,126 +1,190 @@
-* {
-      box-sizing: border-box;
-        margin: 0;
-          padding: 0;
-          }
+/* =========================
+   GLOBAL RESET
+   ========================= */
+   * {
+     margin: 0;
+       padding: 0;
+         box-sizing: border-box;
+         }
 
-          body {
-            font-family: Arial, sans-serif;
-              background: #000;
-                color: #fff;
-                }
+         html, body {
+           font-family: Arial, Helvetica, sans-serif;
+             background: #000;
+               color: #fff;
+               }
 
-                /* NAV */
-                nav {
-                  background: #f4b400;
-                    position: sticky;
-                      top: 0;
-                        z-index: 1000;
-                        }
+               /* =========================
+                  NAV BAR
+                  ========================= */
+                  nav {
+                    background: #f4b400;
+                      position: sticky;
+                        top: 0;
+                          z-index: 1000;
 
-                        nav ul {
-                          display: flex;
-                            flex-wrap: wrap;
+                            display: flex;
                               justify-content: center;
-                                list-style: none;
-                                }
+                                align-items: center;
 
-                                nav li {
-                                  margin: 8px 12px;
+                                  padding: 14px 10px;
                                   }
 
-                                  nav a {
-                                    text-decoration: none;
-                                      color: #000;
-                                        font-weight: bold;
-                                          white-space: nowrap;
-                                          }
+                                  nav ul {
+                                    display: flex;
+                                      flex-wrap: wrap;
+                                        justify-content: center;
+                                          list-style: none;
+                                            margin: 0;
+                                              padding: 0;
+                                              }
 
-                                          /* HERO */
-                                          .hero img {
-                                            width: 100%;
-                                              height: auto;
-                                                display: block;
+                                              nav li {
+                                                margin: 6px 12px;
                                                 }
 
-                                                /* GALLERY */
-                                                .gallery {
-                                                  display: grid;
-                                                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                                                      gap: 16px;
-                                                        padding: 20px;
+                                                nav a {
+                                                  text-decoration: none;
+                                                    color: #000;
+                                                      font-weight: bold;
+                                                        white-space: nowrap;
                                                         }
 
-                                                        .gallery img {
-                                                          width: 100%;
-                                                            height: auto;
-                                                              border-radius: 6px;
-                                                              }
+                                                        nav a:hover {
+                                                          text-decoration: underline;
+                                                          }
 
-                                                              /* HEADINGS */
-                                                              h1, h2 {
-                                                                padding: 20px;
-                                                                  text-align: center;
-                                                                  }
+                                                          /* =========================
+                                                             HERO
+                                                             ========================= */
+                                                             .hero {
+                                                               width: 100%;
+                                                               }
 
-                                                                  /* FOOTER */
-                                                                  footer {
-                                                                    text-align: center;
-                                                                      padding: 20px;
-                                                                        font-size: 14px;
-                                                                          color: #ccc;
-                                                                          }
-                                                                          .actions {
-                                                                              margin-top: 20px;
-                                                                                display: flex;
-                                                                                  flex-direction: column;
-                                                                                    gap: 12px;
-                                                                                      max-width: 280px;
-                                                                                      }
+                                                               .hero img {
+                                                                 width: 100%;
+                                                                   height: auto;
+                                                                     display: block;
+                                                                     }
 
-                                                                                      .btn {
-                                                                                        display: block;
-                                                                                          text-align: center;
-                                                                                            padding: 12px 16px;
-                                                                                              font-weight: bold;
-                                                                                                text-decoration: none;
-                                                                                                  border-radius: 6px;
-                                                                                                  }
-
-                                                                                                  .square-btn {
-                                                                                                    background: #e0e0e0;
-                                                                                                      color: #333;
-                                                                                                      }
-
-                                                                                                      .order-btn {
-                                                                                                        background: #f2b705; /* matches your nav yellow */
-                                                                                                          color: #000;
-                                                                                                          }
-                                                                          }
-                                                                          /* Action Buttons */
-                                                                          .actions {
-                                                                            margin-top: 16px;
+                                                                     /* =========================
+                                                                        MAIN CONTENT
+                                                                        ========================= */
+                                                                        main.page {
+                                                                          padding: 32px 16px;
+                                                                            text-align: center;
                                                                             }
 
-                                                                            .actions a {
-                                                                              display: inline-block;
-                                                                                padding: 12px 20px;
-                                                                                  margin: 6px 0;
-                                                                                    background-color: #f4c400; /* WCPG yellow */
-                                                                                      color: #000;
-                                                                                        font-weight: bold;
-                                                                                          text-decoration: none;
-                                                                                            border-radius: 6px;
-                                                                                              text-align: center;
-                                                                                                transition: background-color 0.2s ease;
-                                                                                                }
+                                                                            main.page h1 {
+                                                                              font-size: 2.2rem;
+                                                                                margin-bottom: 12px;
+                                                                                }
 
-                                                                                                .actions a:hover {
-                                                                                                  background-color: #d9ad00;
-                                                                                                  }
-}
-.actions a:hover {
-    background-color: #ffd84d;
-      transform: translateY(-2px);
-      }
-}
+                                                                                main.page p {
+                                                                                  font-size: 1.1rem;
+                                                                                    margin-bottom: 20px;
+                                                                                      color: #ddd;
+                                                                                      }
+
+                                                                                      /* =========================
+                                                                                         SECTIONS / CARDS
+                                                                                         ========================= */
+                                                                                         section.section {
+                                                                                           max-width: 900px;
+                                                                                             margin: 0 auto 40px auto;
+                                                                                             }
+
+                                                                                             .card {
+                                                                                               background: #000;
+                                                                                                 padding: 24px 16px;
+                                                                                                 }
+
+                                                                                                 /* =========================
+                                                                                                    ACTION BUTTONS
+                                                                                                    ========================= */
+                                                                                                    .actions {
+                                                                                                      margin: 16px 0;
+                                                                                                      }
+
+                                                                                                      .actions a {
+                                                                                                        display: inline-block;
+                                                                                                          padding: 14px 22px;
+                                                                                                            margin: 6px 0;
+                                                                                                              background: #f4b400;
+                                                                                                                color: #000;
+                                                                                                                  font-weight: bold;
+                                                                                                                    text-decoration: none;
+                                                                                                                      border-radius: 6px;
+                                                                                                                        text-align: center;
+                                                                                                                          transition: background 0.2s ease;
+                                                                                                                          }
+
+                                                                                                                          .actions a:hover {
+                                                                                                                            background: #ffcc33;
+                                                                                                                            }
+
+                                                                                                                            /* =========================
+                                                                                                                               IMAGE GRIDS
+                                                                                                                               ========================= */
+                                                                                                                               .image-grid {
+                                                                                                                                 display: grid;
+                                                                                                                                   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                                                                                                                                     gap: 16px;
+                                                                                                                                       margin-top: 24px;
+                                                                                                                                       }
+
+                                                                                                                                       .image-grid img {
+                                                                                                                                         width: 100%;
+                                                                                                                                           height: auto;
+                                                                                                                                             border-radius: 6px;
+                                                                                                                                             }
+
+                                                                                                                                             /* =========================
+                                                                                                                                                ORDER SHEET
+                                                                                                                                                ========================= */
+                                                                                                                                                form {
+                                                                                                                                                  max-width: 600px;
+                                                                                                                                                    margin: 0 auto;
+                                                                                                                                                      text-align: left;
+                                                                                                                                                      }
+
+                                                                                                                                                      form label {
+                                                                                                                                                        display: block;
+                                                                                                                                                          margin: 14px 0 6px 0;
+                                                                                                                                                            font-weight: bold;
+                                                                                                                                                            }
+
+                                                                                                                                                            form input,
+                                                                                                                                                            form textarea,
+                                                                                                                                                            form select {
+                                                                                                                                                              width: 100%;
+                                                                                                                                                                padding: 10px;
+                                                                                                                                                                  border-radius: 4px;
+                                                                                                                                                                    border: none;
+                                                                                                                                                                      margin-bottom: 10px;
+                                                                                                                                                                      }
+
+                                                                                                                                                                      form button {
+                                                                                                                                                                        margin-top: 12px;
+                                                                                                                                                                          padding: 12px 20px;
+                                                                                                                                                                            background: #f4b400;
+                                                                                                                                                                              color: #000;
+                                                                                                                                                                                font-weight: bold;
+                                                                                                                                                                                  border: none;
+                                                                                                                                                                                    border-radius: 6px;
+                                                                                                                                                                                      cursor: pointer;
+                                                                                                                                                                                      }
+
+                                                                                                                                                                                      form button:hover {
+                                                                                                                                                                                        background: #ffcc33;
+                                                                                                                                                                                        }
+
+                                                                                                                                                                                        /* =========================
+                                                                                                                                                                                           FOOTER
+                                                                                                                                                                                           ========================= */
+                                                                                                                                                                                           footer {
+                                                                                                                                                                                             border-top: 1px solid #333;
+                                                                                                                                                                                               text-align: center;
+                                                                                                                                                                                                 padding: 16px;
+                                                                                                                                                                                                   font-size: 0.9rem;
+                                                                                                                                                                                                     color: #aaa;
+                                                                                                                                                                                                     }
