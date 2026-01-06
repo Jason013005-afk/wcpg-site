@@ -119,3 +119,8 @@
                                                                                                   background-color: #d9ad00;
                                                                                                   }
 }
+.actions a:hover {
+    background-color: #ffd84d;
+      transform: translateY(-2px);
+      }
+}
