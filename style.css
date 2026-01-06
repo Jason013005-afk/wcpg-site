@@ -97,4 +97,25 @@
                                                                                                           color: #000;
                                                                                                           }
                                                                           }
+                                                                          /* Action Buttons */
+                                                                          .actions {
+                                                                            margin-top: 16px;
+                                                                            }
+
+                                                                            .actions a {
+                                                                              display: inline-block;
+                                                                                padding: 12px 20px;
+                                                                                  margin: 6px 0;
+                                                                                    background-color: #f4c400; /* WCPG yellow */
+                                                                                      color: #000;
+                                                                                        font-weight: bold;
+                                                                                          text-decoration: none;
+                                                                                            border-radius: 6px;
+                                                                                              text-align: center;
+                                                                                                transition: background-color 0.2s ease;
+                                                                                                }
+
+                                                                                                .actions a:hover {
+                                                                                                  background-color: #d9ad00;
+                                                                                                  }
 }
